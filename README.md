@@ -1,1 +1,10 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Created by Klaudia, Benoit, and Jose gtom the [Le Wagon coding bootcamp - batch 69 Copenhagen].
+
+Service Offering:
+On demand vegan cooking. Choose type of meal you are in the mood for, type of chef, enjoy a delicious vegan meal! Simples. 
+
+Name: To Be Named
+
+
+
+
