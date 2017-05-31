@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources: orders do
+    resources: chefs
+
   get 'orders/new'
 
   get 'orders/create'
