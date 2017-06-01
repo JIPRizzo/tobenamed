@@ -1,1 +1,35 @@
 // Your footer style
+
+#footer {
+
+  background-color: #19483F;
+  height: 70px;
+  text-align: center;
+}
+
+a {
+  padding-left: 20px;
+}
+
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+  font-size: 30px;
+
+}
+
+.list-inline i{
+  color: #CCCCCC;
+  letter-spacing: 15px;
+}
+
+i:hover {
+  color: yellow;
+}
+
+#footer p{
+  color: #CCCCCC;
+}
+
