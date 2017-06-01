@@ -1,7 +1,12 @@
 <h1>Pages#home</h1>
 
+
+<!-- Search form -->
+
 <form action="/chefs" method="get" class="form-inline">
   <%= select_tag 'food_choice', options_for_select(@meal_types), {class: "form-control"}  %>
   <input class="search datepicker form-control" type="text" placeholder="Select Date" id= "select_date" name="end_date">
   <input type="submit" class="btn btn-primary">
 </form>
+
+<!-- Chef Cards  -->
