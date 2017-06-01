@@ -1,8 +1,10 @@
 <div class="navbar-wagon">
   <!-- Logo -->
+  <div class="carrot_logo">
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= cl_image_tag("carrot_logo.png") %>
   <% end %>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
