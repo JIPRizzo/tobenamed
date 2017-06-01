@@ -10,6 +10,7 @@ class MenusController < ApplicationController
   end
 
   def index
+    @menus = Menu.all
   end
 
   def destroy
