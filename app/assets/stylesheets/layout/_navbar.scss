@@ -131,6 +131,13 @@
 }
 
 .carrot_logo {
-  padding-left: -50px;
+  position: relative;
+
+
+.name {
+position: absolute;
+left: 80px;
+bottom: 5px;
+}
 
 }
