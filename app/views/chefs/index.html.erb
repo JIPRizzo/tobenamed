@@ -1,15 +1,16 @@
-<div class="chef-cards-wrapper"><div class="container">
-    <div class="row">
+<div class="chef-cards-wrapper"><div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @product.photo, height: 300, width: 400, crop: :fill %>')">
+
+ <div class="row">
       <% @chefs.each do |chef | %>
       <div class="col-xs-12 col-md-4">
         <div class="chef-card">
-          <div class="card-category"><%= "$#{toy.price_usd} per day" %></div>
+          <div class="card-category"></div>
           <div class="card-description">
             <h2><%= chef.name %></h2>
             <p><%= chef.description %></p>
           </div>
-          <%= cl_image_tag chef.image.path, class: "card-user chef-avatar" %>
-          <a class="card-link" href="<%= chef_path(toy) %>"></a>
+          <%= cl_image_tag chef.avatar.path, class: "card-user chef-avatar" %>
+          <a class="card-link" href="<%= chef_path(chef) %>"></a>
         </div>
       </div>
       <% end %>
@@ -17,3 +18,6 @@
   </div>
 
 </div>
+
+
+
