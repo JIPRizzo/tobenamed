@@ -1,10 +1,16 @@
 // Your footer style
 
-#footer {
 
-  background-color: #19483F;
-  height: 70px;
+#footer_all {
+padding-top: 40px;
+
+}
+#footer {
   text-align: center;
+  background-color: #19483F;
+  height: 90px;
+  position: relative;
+  padding-top: 25px;
 }
 
 a {
@@ -26,10 +32,33 @@ a {
 }
 
 i:hover {
-  color: yellow;
+  color: #FC8A15;
 }
 
 #footer p{
   color: #CCCCCC;
+}
+
+.lemon_tree {
+  position: absolute;
+  bottom: 40px;
+}
+
+.cherry_tree {
+  position: absolute;
+  left: 120px;
+  bottom: 40px;
+}
+
+.windmill {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+}
+
+.tractor {
+  position: absolute;
+  right: 170px;
+  bottom: 10px;
 }
 
