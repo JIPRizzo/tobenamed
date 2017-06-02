@@ -10,69 +10,39 @@
 Menu.destroy_all
 Chef.destroy_all
 
-chef = Chef.create([
+chef = Chef.create!([
   {
     name: "Ichiban Yashimoto",
     description: "I started cooking when I went vegan as a teenager. The first vegan cookbook I ever cooked from was the Tofu Cookery, by Louise Hagler. It was a really important cookbook for my family, because we never really cooked together before that. We’d make Barbeque Tofu, or Tofu Balls And Spaghetti, and it really brought us closer. My friends and I also formed a kitchen posse. We cooked for any old reason: birthdays, holidays, road trips, touring bands. We’d stay up all night making an elaborate seitan roast, wake up in the afternoon and make pancakes, go to an anti-fur demonstration then start all over again! People often ask if I’m self-taught, and I guess that, yes, technically I’m self-taught. But really I’ve picked things up from all of the awesome and skilled people I’ve worked alongside over the years. From the guy at Food Not Bombs who showed me how to slice 10 pounds of broccoli in under 10 minutes, to the prep cook at a Brooklyn restaurant where I was a waitress who taught me to slice onions – the world has been my cooking school",
-    photo_url: "http://www.cooksgazette.com/wp-content/uploads/2017/04/TenetsofJapaneseCooking-690x505.jpg?x31962"
-  },
-
-  {
-    name: "Additri Lakshmi",
-    description: "I have become a vegan nearly 10 years ago and I feel very passionate about preparing vegan meals. I try to use whole, organic as less processed as possible ingredients. I do use some new products and substitutes to find out how they taste and work, but eventually phase them out with home made or unprocessed options. Our food philosophy keeps changing based on things that make sense to me and you can notice that in the posts and recipes over the years.",
-    photo_url: "http://images.indulgexpress.com/uploads/user/imagelibrary/2017/2/25/original/CHEFTAB2_-_Copy.JPG"
-  },
-
-  {
-    name: "Matthew Kenney",
-    description: "I started preparing vegan meals for my family a long time ago. I am very interested in preparing food with fresh and healthy ingredients. I am extremely against animal cruelty and do not use any ingredients that come from animals. I specialize in making delicious vegan burgers. I would love to share my passion for vegan cooking with other people, proving that it is possible to eat well without hurting any animals.",
-    photo_url: "http://www.secretitaly.it/wp-content/uploads/copertina2.jpg"
+    avatar_url: "http://www.cooksgazette.com/wp-content/uploads/2017/04/TenetsofJapaneseCooking-690x505.jpg?x31962"
   },
 
   {
     name: "Ani Phyo",
     description: "I am an organic chef, author, whole food and sustainable agriculture advocate. I am an advocate of raw foodism lifestyle promoting fresh and unprocessed foods that are organic, sustainable, and support green living.",
-    photo_url: "http://i.dailymail.co.uk/i/pix/2015/04/21/article-urn:publicid:ap.org:3d494fd869e44fe38eff89293d2468f5-6XxWFFz77-HSK1-238_634x876.jpg"
+    avatar_url: "http://thisnzlife.co.nz/wp-content/uploads/2016/05/AnnaKidman_SachiesKitchen-73-of-144_crop.jpg"
   },
 
   {
     name: "Antonio Luis",
     description: "My goal is to prove to people that eating vegan doesn't have to be boring. In fact, it is the most exciting way to eat! Fresh and organically grown plant-based foods are among nature's most healthful and delicious gifts.",
-    photo_url: "http://feminalaredo.com/images/noticias/cm.jpg"
-  },
-
-  {
-    name: "Said Azar Kuri",
-    description: "Going vegan completely changed my life. I feel more healthy and have much more energy. I would love to convince people to start eating more healthily and take better care of what they eat. I have been cooking vegan meals for a relatively long period now and have gained my experience in vegan cooking from many restaurants all over the world.",
-    photo_url: "http://e.peruthisweek.e3.pe//ima/0/0/0/3/8/38591/624x468.jpg"
+    avatar_url: "http://feminalaredo.com/images/noticias/cm.jpg"
   },
 
   {
     name: "Bobby Fley",
     description: "I am passionate about plant-based cooking. It started when I was a teenager and wanted to do something to help prevent animal cruelty. It completely changed my lifestyle. Finding an inspiration while making vegan dishes is not as hard as one may think. I use my creativity to make the dishes look and taste good.",
-    photo_url: "https://munchies-images.vice.com/wp_upload/P3090560.jpg?crop=1xw:0.75xh;*,*&resize=1000:*"
-  },
-
-  {
-    name: "Anna Cortello",
-    description: "For the past 20 years I have been working with some elite restaurants in Spain, Tokyo and Vietnam. I have developed a strong interest in preparing delicious vegan meals and this is the are which I focused on. I love preparing good looking, colorful dishes which are composed of many vegetables and fruits. I use ingredients that are organic and of high quality",
-    photo_url: "http://thisnzlife.co.nz/wp-content/uploads/2016/05/AnnaKidman_SachiesKitchen-73-of-144_crop.jpg"
+    avatar_url: "https://munchies-images.vice.com/wp_upload/P3090560.jpg?crop=1xw:0.75xh;*,*&resize=1000:*"
   },
 
   {
     name: "Mario Batali",
     description: "Being vegan is a lifestyle. Preparing vegan dishes requires a lot of passion and creativity from a person. I learned many fascinating things about plant-based cooking during my travel around Asia, where people in general eat more fruits and vegetables. I decided to introduce vegan cooking into my daily life. I have been cooking plant-based meals for over 7 years now. After trying my food some of my friends decided to go vegan as well. I love to emphasize the taste of the food without compromising on the quality of wht you eat. By trying my meals you will find out that being vegan is actually not as bad as it sounds.",
-    photo_url: "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/chef0815-francismallmann_0.jpg?itok=P6pXQUvY"
-  },
-
-  {
-    name: "Alfred Brown",
-    description: "I am a self-taught chef who loves using fresh and organic ingredients in order to prepare great vegan dishes. The reason why I decided to become a vegan is because I consider it a more sustainable option to look after our planet and reduce the animal cruelty. Being vegan is never boring. There are so many amazing dishes you can create using mostly vegetables and fruits.",
-    photo_url: "http://www.sbs.com.au/food/sites/sbs.com.au.food/files/styles/full/public/f3546853-e96f-4f6c-b9bb-8d43f0743080_1495412561.jpeg?itok=PbPuNhP1"
+    avatar_url: "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/chef0815-francismallmann_0.jpg?itok=P6pXQUvY"
   }
   ])
 
-menus = Menu.create ([
+menus = Menu.create! ([
   {
     name: "Japo I",
     description: "Appetizer: Bruschetta with tomatoes and basil. Main Dish: Eggless spaghetti carbonara with tofu. Dessert: Melon salad with grappa granita.",
@@ -88,7 +58,7 @@ menus = Menu.create ([
   {
     name: "A little taste of India",
     description: "Appetizer: Indian spiced roasted chickpeas. Main Dish: Vegan filo samosas. Dessert: Toasted coconut balls.",
-    chef: Chef.find_by_name("Additri Lakshmi"),
+    chef: Chef.find_by_name("Ichiban Yashimoto"),
     meal_type: "Indian",
     price_per_guest: 160,
     photo_urls: [
@@ -101,7 +71,7 @@ menus = Menu.create ([
   {
     name: "Spanish Glory",
     description: "Appetizer: Sweet potato chips. Main Dish: Veggie burger. Dessert: Fresh fruit salad.",
-    chef: Chef.find_by_name("Matthew Kenney"),
+    chef: Chef.find_by_name("Antonio Luis"),
     meal_type: "American",
     price_per_guest: 240,
     photo_urls: [
@@ -139,7 +109,7 @@ menus = Menu.create ([
   {
     name: "Feast from the Middle East",
     description: "Appetizer: Cajun jam fries. Main Dish: Roasted cauliflower with onion, garlic, and thyme. Dessert: Summer smoothie parfait.",
-    chef: Chef.find_by_name("Said Azar Kuri"),
+    chef: Chef.find_by_name("Bobby Fley"),
     meal_type: "Lebanese",
     price_per_guest: 185,
     photo_urls: [
@@ -166,7 +136,7 @@ menus = Menu.create ([
   {
     name: "Sweet dreams",
     description: "Appetizer: Japchae (Sweet potato noodles). Main Dish: Vegan bulgogi. Dessert: Pumpkin porridge.",
-    chef: Chef.find_by_name("Anna Cortello"),
+    chef: Chef.find_by_name("Ani Phyo"),
     meal_type: "Vietnamese",
     price_per_guest: 225,
     photo_urls: [
@@ -191,7 +161,7 @@ menus = Menu.create ([
   {
     name: "American Classic",
     description: "Appetizers: Rusty Kettle Yukon Gold Potatoes, All American Beetroot & Barley Burgers.  Burger Dessert: Carrot pudding with cardamom",
-    chef: Chef.find_by_name("Alfred Brown"),
+    chef: Chef.find_by_name("Mario Batali"),
     meal_type: "American",
     price_per_guest: 199,
      photo_urls: [
