@@ -1,0 +1,48 @@
+.home-avatar-padded {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.home-card {
+  height: 200px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.home-card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.home-card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.home-card-description h2 {
+  font-size: 24px;
+}
+.home-card-description p {
+  font-size: 13px;
+  }
+.home-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.home-card-link:hover{
+  opacity: 0.1;
+}
