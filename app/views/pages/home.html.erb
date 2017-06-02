@@ -1,7 +1,39 @@
-<h1>Pages#home</h1>
 
+
+
+
+<h1>  </h1>
+<!-- Search form -->
 <form action="/chefs" method="get" class="form-inline">
   <%= select_tag 'food_choice', options_for_select(@meal_types), {class: "form-control"}  %>
   <input class="search datepicker form-control" type="text" placeholder="Select Date" id= "select_date" name="end_date">
-  <input type="submit" class="btn btn-primary">
 </form>
+
+<!-- Call To Action Button -->
+<div class="wrapper">
+  <div class="home-btn-wrapper">
+  <a class="home-btn" href="#" ></a>
+  </div>
+</div>
+
+<!-- Chef Cards -->
+<div class="container">
+<div class="row">
+    <% @chefs.each do |chef| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
+        <div class="home-card-category"></div>
+        <div class="home-card-description">
+          <h2> <%= chef.name  %> </h2>
+          <p>  <%= chef.short_description %> </p>
+        </div>
+        <%= cl_image_tag chef.avatar.path, width: 50, crop: :thumb, gravity: :face, aspect_ratio: "1:1", class: "avatar-large home-avatar-padded" %>
+        <a class="home-card-link" href="#" ></a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
