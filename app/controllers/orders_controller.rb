@@ -1,22 +1,17 @@
 class OrdersController < ApplicationController
   def new
+    @order = Order.new
   end
 
   def create
   end
 
-  def destroy
-  end
-
-  def index
-  end
-
   def update
   end
 
-  def edit
-  end
+  private
 
-  def add
+  def order_params
+    params.require(:order).permit(:address, :event_type, :guests, :date)
   end
 end
