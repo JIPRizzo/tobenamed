@@ -1,22 +1,17 @@
-<div class="chef-cards-wrapper"><div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @product.photo, height: 300, width: 400, crop: :fill %>')">
 
- <div class="row">
-      <% @chefs.each do |chef | %>
-      <div class="col-xs-12 col-md-4">
-        <div class="chef-card">
-          <div class="card-category"></div>
-          <div class="card-description">
-            <h2><%= chef.name %></h2>
-            <p><%= chef.description %></p>
+<div class="container index_container">
+  <div class="row">
+    <% @chefs.each do |chef| %>
+      <div class="col-xs-12 col-sm-4 index-card-padding">
+        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
+          <div class="index-card-description">
+            <h2><%=  chef.name %></h2>
+            <p><%=  chef.description[0..50] + "..." %></p>
+          </div><%= cl_image_tag chef.avatar.path, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
           </div>
-          <%= cl_image_tag chef.avatar.path, class: "card-user chef-avatar" %>
-          <a class="card-link" href="<%= chef_path(chef) %>"></a>
-        </div>
       </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-
 </div>
 
 
