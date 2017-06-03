@@ -6,9 +6,36 @@
   </form>
 </div>
 
+<!-- How it works Cards -->
+
+
+<h1 class="text-center">How it works </h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+    <div class="hiw-icons text-center"><%= cl_image_tag("search-icons", width: 80, height: 80) %>
+</div>
+     <div class="design-card text-center"><p>Select your type food and on which date you would like to rent a chef.</p>
+     </div>
+   </div>
+   <div class="col-xs-12 col-sm-4">
+    <div class="hiw-icons text-center"><%= cl_image_tag("menuicon", width: 80, height: 80) %>
+    </div>
+    <div class="design-card text-center"><p>Choose among a selection of menus you would like one of our chefs to prepare for you.</p></div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <div class="hiw-icons text-center"><%= cl_image_tag("cheficon", width: 80, height: 80) %>
+    </div>
+    <div class="design-card text-center"><p>Confirm the number of guests and type of event so the selected chefs has all the information to provide you with the best possible experience.</p></div>
+  </div>
+</div>
+</div>
+
+
 <!-- Chef Cards -->
 <div class="container">
-<div class="row">
+  <div class="row">
     <% @chefs.each do |chef| %>
     <div class="col-xs-12 col-sm-4">
       <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
@@ -24,6 +51,9 @@
     <% end %>
   </div>
 </div>
+
+
+
 
 
 
