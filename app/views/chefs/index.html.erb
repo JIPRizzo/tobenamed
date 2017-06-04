@@ -13,3 +13,27 @@
   </div>
 </div>
 
+<!-- Flipping Card  -->
+
+
+<div class="container">
+<div class="row">
+<% @chefs.each do |chef| %>
+<div class="col-xs-12 col-sm-4">
+<div class="new-chef-card" >
+  <div class="top-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')"></div>
+  <div class="chef-avatar">
+    <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+  </div>
+
+<div class="bottom-section">
+  <h5><%=  chef.name %></h5>
+  <p><%=  chef.description[0..150] + "..." %></p>
+</div>
+</div>
+</div>
+<% end %>
+</div>
+</div>
+
+
