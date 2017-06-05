@@ -1,37 +1,38 @@
 
 
-<!-- Header -->
+<!-- Call To Action Instructions | Header -->
 <div class="home-container">
-<h1> Stop wondering </h1>
-<h3> around for vegan food; find a chef in your area:</h3>
+  <h1> Stop wondering </h1>
+  <h2> around for vegan food; </h2>
+  <h3> find a chef in your area: </h3>
 </div>
 
 <!-- Call To Action | Select Date & Select Type of Cuisine -->
 
-<div class="home-search-wrapper text-center">
+<div class="home-search-wrapper">
   <form action="/chefs" method="get" class="form-inline">
-    <%= select_tag 'food_choice', options_for_select(@meal_types), {class: "form-control"}  %>
-    <input class="search datepicker form-control" type="text" placeholder="Select Date" id= "select_date" name="end_date">
-    <input type="submit" class="btn btn-primary">
+    <%= select_tag 'food_choice', options_for_select(@meal_types.insert(0,"Meal Type")), {class: "form-control"}  %>
+    <input class="search datepicker form-control" type="text" placeholder="When?" id= "select_date" name="end_date">
+    <input type="submit" class="tbn-submit-btn btn btn-primary" value="GET Chef">
   </form>
 </div>
 
 <!-- Chef Cards -->
-<div class="container">
-<div class="row">
-    <% @chefs.each do |chef| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
-        <!-- <div class="home-card-category"></div>  -->
-        <div class="home-card-description">
-          <h2> <%= chef.name  %> </h2>
-          <p>  <%= chef.short_description %> </p>
+<div class="home-wrapper-card">
+  <div class="container">
+    <div class="row">
+      <% @chefs.each do |chef| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
+          <div class="home-card-description">
+            <h2> <%= chef.name  %> </h2>
+            <p>  <%= chef.short_description %> </p>
+          </div>
+          <%= cl_image_tag chef.avatar.path, width: 100, crop: :thumb, gravity: :face, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
         </div>
-        <%= cl_image_tag chef.avatar.path, width: 50, crop: :thumb, gravity: :face, aspect_ratio: "1:1", class: "avatar-large home-avatar-padded" %>
-        <a class="home-card-link" href="#" ></a>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>
 
