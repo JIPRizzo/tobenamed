@@ -1,3 +1,13 @@
+
+
+<!-- Header -->
+<div class="home-container">
+<h1> Stop wondering </h1>
+<h3> around for vegan food; find a chef in your area:</h3>
+</div>
+
+<!-- Call To Action | Select Date & Select Type of Cuisine -->
+
 <div class="home-search-wrapper text-center">
   <form action="/chefs" method="get" class="form-inline">
     <%= select_tag 'food_choice', options_for_select(@meal_types), {class: "form-control"}  %>
@@ -12,7 +22,7 @@
     <% @chefs.each do |chef| %>
     <div class="col-xs-12 col-sm-4">
       <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
-        <div class="home-card-category"></div>
+        <!-- <div class="home-card-category"></div>  -->
         <div class="home-card-description">
           <h2> <%= chef.name  %> </h2>
           <p>  <%= chef.short_description %> </p>
