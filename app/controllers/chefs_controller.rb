@@ -3,7 +3,11 @@ class ChefsController < ApplicationController
 
 
   def index
-    @chefs = Chef.all
+    if params[:food_choice]
+      @chefs = Chef.joins(:menus).where(menus: {meal_type: params[:food_choice]})
+    else
+      @chefs = Chef.all
+    end
   end
 
 
@@ -20,7 +24,7 @@ class ChefsController < ApplicationController
   def show
     @chef = Chef.find(params[:id])
     # In the view — the menu that is selected
-    @selected_menu = @chef.menus.first # dynamically change with params later!
+    @selected_menu = @chef.menus.select {|menu| menu.meal_type == params[:food_choice]}.first # dynamically change with params later!
     # Iterate on those in the view to show other menus
     @other_menus = @chef.menus.reject { |m| m.id == @selected_menu.id }
   end
