@@ -3,7 +3,7 @@ class ChefsController < ApplicationController
 
 
   def index
-    @chefs = Chef.all
+    @chefs = Chef.includes(:menus).all
   end
 
 
