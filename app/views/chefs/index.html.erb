@@ -6,64 +6,96 @@
 <div class="container index_container">
   <div class="row">
     <% @chefs.each do |chef| %>
-      <div class="col-xs-12 col-sm-4 index-card-padding">
-        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
-          <div class="index-card-description">
-            <h2><%=  chef.name %></h2>
-            <p><%=  chef.description[0..50] + "..." %></p>
-          </div><%= cl_image_tag chef.avatar.path, width: 100, crop: :thumb, gravity: :face, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
-          </div>
+    <div class="col-xs-12 col-sm-4 index-card-padding">
+      <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
+        <div class="index-card-description">
+          <h2><%=  chef.name %></h2>
+          <p><%=  chef.description[0..50] + "..." %></p>
+        </div><%= cl_image_tag chef.avatar.path, width: 100, crop: :thumb, gravity: :face, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
       </div>
+    </div>
     <% end %>
   </div>
 </div>
+
+
 
 <!-- New Card   -->
 
 
 <div class="container">
-<div class="row">
-<% @chefs.each do |chef| %>
-<div class="col-xs-12 col-sm-4">
-<div class="new-chef-card" >
-  <div class="top-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')"></div>
-  <div class="chef-avatar">
-    <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+  <div class="row">
+    <% @chefs.each do |chef| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="new-chef-card" >
+        <div class="top-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')"></div>
+        <div class="chef-avatar">
+          <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+        </div>
+
+        <div class="bottom-section">
+          <h5><%=  chef.name %></h5>
+          <p><%=  chef.description[0..150] + "..." %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
-
-<div class="bottom-section">
-  <h5><%=  chef.name %></h5>
-  <p><%=  chef.description[0..150] + "..." %></p>
-</div>
-</div>
-</div>
-<% end %>
-</div>
 </div>
 
-<!-- Flipping Card Front  -->
+
+
+
+
+
+
+
+
+
+
+<!-- Flipping Card Back  -->
 
 
 <div class="container">
-<div class="row">
-<% @chefs.each do |chef| %>
-<div class="col-xs-12 col-sm-4">
-<div class="flip3D">
-  <div class="new-chef-card back-chef-card">
-  <div class="top-section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')"></div>
-  <div class="chef-avatar">
-    <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+  <div class="row">
+    <% @chefs.each do |chef| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="flip3D">
+        <div class="new-chef-card back-chef-card">
+          <div class="top-section-back"></div>
+          <div class="chef-avatar">
+            <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+          </div>
+          <div class="bottom-section-back">
+            <ul class="list-inline">
+              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <!-- Flipping Card Front  -->
+
+        <div class="new-chef-card front-chef-card">
+          <div class="top-section-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, height: 300, width: 400, crop: :fill %>')"></div>
+          <div class="chef-avatar">
+            <%= cl_image_tag chef.avatar.path, width: 100, height: 100, crop: :thumb, gravity: :face %>
+          </div>
+          <div class="bottom-section-front">
+            <h5><%=  chef.name %></h5>
+            <p><%=  chef.description[0..150] + "..." %></p>
+          </div>
+        </div>
+
+
+
+      </div>
     </div>
-    <div class="bottom-section">
-  <h5><%=  chef.name %></h5>
-  <p><%=  chef.description[0..150] + "..." %></p>
-</div>
+    <% end %>
   </div>
-  <div class="new-chef-card front-chef-card">Box 1 - Front</div>
-</div>
-</div>
-<% end %>
-</div>
 </div>
 
 
