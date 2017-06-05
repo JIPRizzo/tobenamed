@@ -23,6 +23,7 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
+    @order = Order.new
     # In the view — the menu that is selected
     @selected_menu = @chef.menus.select {|menu| menu.meal_type == params[:food_choice]}.first # dynamically change with params later!
     # Iterate on those in the view to show other menus
