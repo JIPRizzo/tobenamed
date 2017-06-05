@@ -14,29 +14,31 @@ body {
 
 
 
+
 .new-chef-card {
 display: inline-block;
 background: #FFF;
-width: 300px;
+width: 200px;
 height: 400px;
 border-radius: 4px;
 position: relative;
 
  .top-section-front{
-  background: #ACC0E9;
   height: 100px;
   border-radius: 4px 4px 0 0;
  }
+
  .top-section-back{
-  background-color: #FC8A15;
+  background-color: #FFF;
   height: 80px;
   border-radius: 4px;
   display: table-cell;
   vertical-align: middle;
-  text-align:center;
+  color: #FC8A15;
 
- }
+  }
 }
+
 
 .chef-avatar {
   position: absolute;
@@ -50,6 +52,9 @@ position: relative;
   }
 }
 
+.index-css {
+  padding: 30px;
+}
 
 .menu-card {
   padding: 45px;
@@ -79,6 +84,7 @@ position: relative;
 
 .title-font {
   font-weight: bold;
+  text-align:center;
 }
 
 
