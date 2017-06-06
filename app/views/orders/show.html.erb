@@ -2,15 +2,14 @@
     <h3>Chefs I booked</h3>
 
     <ul>
-      <% @orders.each do |order| %>
       <li>
-        <%= order.guests %> |
-        <%= order.address %> |
-        <%= order.start_date %> |
-        <%= order.end_date %> |
-        <%= order.event_type %>
+        <%= @order.guests %> |
+        <%= @order.address %> |
+        <%= @order.date %> |
+        <%= @order.event_type %> |
+        <%= @order.chef.avatar.path %> |
+
       </li>
-      <% end %>
     </ul>
   </div>
 

@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
 
   def index
-    @orders = Order.all
+    @orders = current_user.orders
   end
 
   def new
@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @orders = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   private
