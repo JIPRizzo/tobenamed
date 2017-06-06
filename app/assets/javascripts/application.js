@@ -5,4 +5,5 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require bootstrap-datepicker
+//= require owl.carousel
 //= require_tree .

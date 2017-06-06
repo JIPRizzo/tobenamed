@@ -1,53 +1,64 @@
 
+
 <div class="container-menu">
-  <div class="other-menus-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @selected_menu.photos.second.path, height: 300, width: 400 , crop: :fill%>')">
+
+  <div class="other-menus-card">
+    <div class="owl-carousel-wrapper">
+      <div class="owl-carousel">
+        <% @selected_menu.photos.each do |photo| %>
+          <div>
+            <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+          </div>
+        <% end %>
+      </div>
+    </div>
    <div class="meal-type-blue-box">
-   <p><%= @selected_menu.meal_type %></p>
+     <p><%= @selected_menu.meal_type %></p>
    </div>
    <div class="meal-description-white-box">
     <p><%= @selected_menu.description %></p>
 
-   </div>
-    <div class="other-menus-card-blue-box">
+  </div>
+  <div class="other-menus-card-blue-box">
     <div class="details-icon">
-    <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+      <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
       <p>Details</p>
     </div>
-    </div>
   </div>
+</div>
 
-  <div class="form_booking">
+<div class="form_booking">
 
   <% if current_user %>
 
-<div class="form_new ">
-<%= simple_form_for(@order) do |f| %>
-  <%= f.error_notification %>
+  <div class="form_new ">
+    <%= simple_form_for(@order) do |f| %>
+    <%= f.error_notification %>
 
-<div class="form_new_design">
-  <div class="form-inputs">
-    <%= f.input :address, required:false %>
-    <%= f.input :guests, required:false%>
-    <%= f.input :date, required:false %>
-    <%= f.input :event_type, required:false %>
-    <%= f.hidden_field :chef_id %>
-    <%= f.hidden_field :menu_id %>
+    <div class="form_new_design">
+      <div class="form-inputs">
+        <%= f.input :address, required:false %>
+        <%= f.input :guests, required:false%>
+        <%= f.input :date, required:false %>
+        <%= f.input :event_type, required:false %>
+        <%= f.hidden_field :chef_id %>
+        <%= f.hidden_field :menu_id %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+  <% else %>
+
+  <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+  <% end %>
+
 </div>
-</div>
-
-<% else %>
-
-<%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-<% end %>
-
-  </div>
 
 </div>
 
@@ -60,47 +71,84 @@
       </div>
       <div class="show-rectangle"><h2><%= @chef.name %></h2>
       </div>
-    <div class="show-triangle-l">
-    </div>
+      <div class="show-triangle-l">
+      </div>
 
       <div class="show-info">
-      <p>
-      <%= @chef.description %>
-      </p>
+        <p>
+          <%= @chef.description %>
+        </p>
 
       </div>
     </div>
 
   </div>
-
   <div class="other-menucontainer">
-  <h3 class="text-center">Other Menus:</h3>
-  <% @other_menus.each do |menu| %>
-    <div class="other-menus-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path menu.photos.second.path, height: 300, width: 400 , crop: :fill%>')">
-     <div class="meal-type-blue-box">
-      <p><%= menu.meal_type %></p>
-     </div>
-     <div class="meal-description-white-box">
+    <h3 class="text-center">Other Menus:</h3>
+    <% @other_menus.each do |menu| %>
+      <div class="other-menus-card">
+        <div class="owl-carousel-wrapper">
+        <div class="owl-carousel">
+          <% menu.photos.each do |photo| %>
+            <div>
+              <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+            </div>
+          <% end %>
+        </div>
+        </div>
+        <div class="meal-type-blue-box">
+          <p><%= menu.meal_type %></p>
+        </div>
+        <div class="meal-description-white-box">
 
-      <p><%= menu.description %></p>
+          <p><%= menu.description %></p>
 
-     </div>
-      <div class="other-menus-card-blue-box">
+        </div>
+        <div class="other-menus-card-blue-box">
 
-       <div class="details-icon">
-      <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
-      <p>Details</p>
+         <div class="details-icon">
+          <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+          <p>Details</p>
+        </div>
       </div>
-      </div>
+    </div>
   <% end %>
-  </div>
+</div>
 
 
-  </div> <!-- Closing menus container -->
+</div> <!-- Closing menus container -->
 </div>
 
 
 
+
+<% if current_user %>
+
+<div class="form_new ">
+  <%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form_new_design">
+    <div class="form-inputs">
+      <%= f.input :address, required:false %>
+      <%= f.input :guests, required:false%>
+      <%= f.input :date, required:false %>
+      <%= f.input :event_type, required:false %>
+      <%= f.input :chef_id, value: @chef.id, hidden:true %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<% else %>
+
+<%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+<% end %>
 
 
 
