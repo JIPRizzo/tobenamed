@@ -61,7 +61,18 @@
   margin: 0 auto;
   margin-top: 50px;
   border-radius: 20px;
+  position: relative;
 }
+
+
+
+.form_booking {
+  padding-left: 200px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+
 
 .show-wrapper {
   margin-top: 100px;
