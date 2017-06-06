@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
-    session["user_return_to"] || "/chefs/id"
-end
+    if params[:chef_id]
+      chef_path(id: :chef_id)
+    else
+      root_path
+    end
+  end
 end

@@ -25,7 +25,7 @@ class ChefsController < ApplicationController
     @chef = Chef.find(params[:id])
     @order = Order.new
     # In the view — the menu that is selected
-    if params[:food_choice] == "Meal Type"
+    if params[:food_choice] == "Meal Type" or params[:food_choice].nil?
       @selected_menu = @chef.menus.first
       # Iterate on those in the view to show other menus
     else
