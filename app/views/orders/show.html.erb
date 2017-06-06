@@ -1,0 +1,16 @@
+<div class= "order-card">
+    <h3>Chefs I booked</h3>
+
+    <ul>
+      <li>
+        <%= @order.guests %> |
+        <%= @order.address %> |
+        <%= @order.date %> |
+        <%= @order.event_type %> |
+        <%= @order.chef.avatar.path %> |
+
+      </li>
+    </ul>
+  </div>
+
+<p>Find me in app/views/orders/add.html.erb</p>
