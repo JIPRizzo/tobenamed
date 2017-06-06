@@ -2,17 +2,17 @@
 <div class="container-menu">
   <div class="other-menus-card">
    <div class="meal-type-blue-box">
-   <p><%= @selected_menu.meal_type %></p>
+     <p><%= @selected_menu.meal_type %></p>
    </div>
    <div class="meal-description-white-box">
     <p><%= @selected_menu.description %></p>
 
-   </div>
-    <div class="other-menus-card-blue-box">
-    <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
-      <p>Details</p>
-    </div>
   </div>
+  <div class="other-menus-card-blue-box">
+    <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+    <p>Details</p>
+  </div>
+</div>
 
 </div>
 
@@ -22,52 +22,52 @@
     <div class="show-bubble">
       <div class="show-rectangle"><h2><%= @chef.name %></h2>
       </div>
-    <div class="show-triangle-l">
-    </div>
+      <div class="show-triangle-l">
+      </div>
 
       <div class="show-info">
-      <h2><%= @chef.name %></h2>
-      <p>
-      <%= @chef.description %>
-      </p>
+        <h2><%= @chef.name %></h2>
+        <p>
+          <%= @chef.description %>
+        </p>
 
       </div>
     </div>
 
   </div>
   <div class="other-menucontainer">
-  <h3 class= "text-center">Other Menus:</h3>
-  <% @other_menus.each do |menu| %>
+    <h3 class= "text-center">Other Menus:</h3>
+    <% @other_menus.each do |menu| %>
     <div class="other-menus-card">
-    <%= cl_image_tag("thmzpuzfv0djgciz81iv.jpg", :width=>400, :height=>200, :crop=>"fill") %>
-     <div class="meal-type-blue-box">
-      <p><%= menu.meal_type %></p>
-     </div>
-     <div class="meal-description-white-box">
+      <%= cl_image_tag("thmzpuzfv0djgciz81iv.jpg", :width=>400, :height=>200, :crop=>"fill") %>
+      <div class="meal-type-blue-box">
+        <p><%= menu.meal_type %></p>
+      </div>
+      <div class="meal-description-white-box">
 
-      <p><%= menu.description %></p>
+        <p><%= menu.description %></p>
 
-     </div>
+      </div>
       <div class="other-menus-card-blue-box">
        <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
-        <p>Details</p>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="other-menus-card">
-   <div class="meal-type-blue-box">
-    <p>Meal Type</p>
+       <p>Details</p>
+     </div>
+     <% end %>
    </div>
-   <div class="meal-description-white-box">
-    <p>description</p>
 
-   </div>
+   <div class="other-menus-card">
+     <div class="meal-type-blue-box">
+      <p>Meal Type</p>
+    </div>
+    <div class="meal-description-white-box">
+      <p>description</p>
+
+    </div>
     <div class="other-menus-card-blue-box">
       <p>Details</p>
     </div>
   </div>
-  </div> <!-- Closing menus container -->
+</div> <!-- Closing menus container -->
 </div>
 
 
@@ -75,23 +75,23 @@
 <% if current_user %>
 
 <div class="form_new ">
-<%= simple_form_for(@order) do |f| %>
+  <%= simple_form_for(@order) do |f| %>
   <%= f.error_notification %>
 
-<div class="form_new_design">
-  <div class="form-inputs">
-    <%= f.input :address, required:false %>
-    <%= f.input :guests, required:false%>
-    <%= f.input :date, required:false %>
-    <%= f.input :event_type, required:false %>
-    <%= f.input :chef_id, value: @chef.id, hidden:true %>
-  </div>
+  <div class="form_new_design">
+    <div class="form-inputs">
+      <%= f.input :address, required:false %>
+      <%= f.input :guests, required:false%>
+      <%= f.input :date, required:false %>
+      <%= f.input :event_type, required:false %>
+      <%= f.input :chef_id, value: @chef.id, hidden:true %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </div>
 
 <% else %>
