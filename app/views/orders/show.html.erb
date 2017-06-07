@@ -1,18 +1,74 @@
-<div class= "order-card">
-    <h3>Chefs I booked</h3>
 
-    <ul>
-      <li>
-        <%= @order.guests %> |
-        <%= @order.address %> |
-        <%= @order.date %> |
-        <%= @order.event_type %> |
-        <%= @order.chef.avatar.path %> |
+<div class="confirmation-title text-center">
+  <h2><%= cl_image_tag("Greenconfirmation.png", :width=>80, :height=>80, :crop=>"fill") %>Your booking is confirmed</h2>
+  <h4>Please view your booking details below</h4>
+</div>
 
-      </li>
-    </ul>
+
+<div class="container container-size">
+  <div class="row">
+    <div class= "order-confirmation">
+      <div class="col-xs-6">
+        <div class="confirmation-chef show-bubble ">
+          <div>
+            <%= cl_image_tag @order.chef.avatar.path, width: 300,  crop: :thumb, gravity: :face, class: "avatar-chef" %>
+          </div>
+          <div class="show-rectangle">
+            <h2><%= @order.chef.name %></h2>
+          </div>
+          <div class="show-triangle-l">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-xs-6">
+        <div class="confirmation-details">
+          <h4 class="text-center">Details of your booking
+          </h4>
+          <ul>
+           <li class="border-confirmation text-center">
+            Number of guests:  <%= @order.guests %>
+          </li>
+          <li class="border-confirmation text-center">
+            Your address:  <%= @order.address %>
+          </li>
+          <li class="border-confirmation text-center">
+            Date for the event:  <%= @order.date %>
+          </li>
+          <li class="border-confirmation git text-center">
+            Type of event:  <%= @order.event_type %>
+          </li>
+          <li class="text-center" style="list-style-type: none">
+            <div class="container">
+             <div class="row">
+              <div class="col-xs-12 col-md-4">
+              <div class="chef-card center-card"><h4>Your selected menu</h4>
+                  <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @order.menu.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
+                    <div class="card-description">
+                      <h4><%= @order.menu.name %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
+</div>
+</div>
+</div>
 
 
-<p>Find me in app/views/orders/add.html.erb</p>
+
+
+
+
+
+
+
+
+
 

@@ -9,7 +9,9 @@ html {
 }
 
 
-
+.text-index {
+  line-height: 80px;
+}
 
 .new-chef-card {
 display: inline-block;
@@ -28,8 +30,7 @@ position: relative;
   background-color: #FFF;
   height: 80px;
   border-radius: 4px;
-  display: table-cell;
-  vertical-align: middle;
+
   color: #FC8A15;
 
   }
@@ -53,7 +54,7 @@ position: relative;
 }
 
 .menu-card {
-  padding: 45px;
+  padding: 40px;
   color: #FFF;
 }
 
@@ -87,7 +88,7 @@ position: relative;
 
 .flip3D{  width:400px; height:400px; margin:10px; }
 .flip3D > .front-chef-card{
-  border: 2px solid #7E7E7E;
+  border: 1px solid #7E7E7E;
   position:absolute;
   -webkit-transform: perspective( 600px ) rotateY( 0deg );
   transform: perspective( 600px ) rotateY( 0deg );
@@ -98,7 +99,7 @@ position: relative;
   transition: transform .5s linear 0s;
 }
 .flip3D > .back-chef-card{
-  border: 2px solid #7E7E7E;
+  border: 1px solid #7E7E7E;
   position:absolute;
   -webkit-transform: perspective( 600px ) rotateY( 180deg );
   transform: perspective( 600px ) rotateY( 180deg );

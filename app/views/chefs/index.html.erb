@@ -9,7 +9,7 @@
       <div class="col-xs-12 col-sm-4">
         <div class="flip3D">
           <div class="new-chef-card back-chef-card">
-            <div class="top-section-back title-font"><h5>Preview of <%= chef.name%>'s menus</h5></div>
+            <div class="top-section-back title-font"><h5 class="text-index">Preview of <%= chef.name%>'s menus</h5></div>
             <% chef.menus.each do |item| %>
             <div class="menu-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path item.photos.sample.path, height: 300, width: 400, crop: :fill%>')">
               <div> <%= item.name %></div>
