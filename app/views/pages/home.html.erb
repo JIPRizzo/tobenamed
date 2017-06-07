@@ -26,41 +26,41 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <div class="hiw-icons text-center"><%= cl_image_tag("search-icons", width: 80, height: 80) %>
-      </div>
-      <div class="design-card text-center"><p>Select your preferred type of vegan food and the date you would like to have a chef over</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="hiw-icons text-center"><%= cl_image_tag("menuicon", width: 80, height: 80) %>
-      </div>
-      <div class="design-card text-center"><p>Choose among a selection of menus you would like one of our chefs to prepare for you.</p></div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="hiw-icons text-center"><%= cl_image_tag("cheficon", width: 80, height: 80) %>
-      </div>
-      <div class="design-card text-center"><p>Confirm the number of guests and type of event so the selected chefs has all the information to provide you with the best possible experience.</p></div>
-    </div>
-  </div>
-</div>
-
-<!-- Chef Cards -->
-<div class="home-wrapper-card">
-  <div class="container">
-    <div class="row">
-      <% @chefs.each do |chef| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
-          <div class="home-card-description">
-            <h2> <%= chef.name  %> </h2>
-            <p>  <%= chef.short_description %> </p>
           </div>
-          <%= cl_image_tag chef.avatar.path, width: 100, crop: :thumb, gravity: :face, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
+        <div class="design-card text-center"><p>Select your preferred type of vegan food and the date you would like to have a chef over</p>
         </div>
       </div>
-      <% end %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="hiw-icons text-center"><%= cl_image_tag("menuicon", width: 80, height: 80) %>
+        </div>
+        <div class="design-card text-center"><p>Choose among a selection of menus you would like one of our chefs to prepare for you.</p></div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="hiw-icons text-center"><%= cl_image_tag("cheficon", width: 80, height: 80) %>
+        </div>
+        <div class="design-card text-center"><p>Confirm the number of guests and type of event so the selected chefs has all the information to provide you with the best possible experience.</p></div>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Chef Cards -->
+  <div class="home-wrapper-card">
+    <div class="container">
+      <div class="row">
+        <% @chefs.each do |chef| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('<%= cl_image_path chef.menus.sample.photos.sample.path, width: 200 %>');">
+            <div class="home-card-description">
+              <h2> <%= chef.name  %> </h2>
+              <p>  <%= chef.short_description %> </p>
+            </div>
+            <%= cl_image_tag chef.avatar.path, width: 100, crop: :thumb, gravity: :face, class: "index-card-user avatar" %><a class="index-card-link" href="<%= chef_path(chef) %>" ></a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 
 
