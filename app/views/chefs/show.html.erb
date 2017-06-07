@@ -27,8 +27,8 @@
   </div>
 </div>
 
-<div class="form_booking">
 
+<div class="form_booking">
   <% if current_user %>
 
   <div class="form_new ">
@@ -117,38 +117,8 @@
 
 
 </div> <!-- Closing menus container -->
-</div>
 
 
-
-
-<% if current_user %>
-
-<div class="form_new ">
-  <%= simple_form_for(@order) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form_new_design">
-    <div class="form-inputs">
-      <%= f.input :address, required:false %>
-      <%= f.input :guests, required:false%>
-      <%= f.input :date, required:false %>
-      <%= f.input :event_type, required:false %>
-      <%= f.input :chef_id, value: @chef.id, hidden:true %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-<% else %>
-
-<%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-<% end %>
 
 
 

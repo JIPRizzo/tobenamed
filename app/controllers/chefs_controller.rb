@@ -32,7 +32,6 @@ class ChefsController < ApplicationController
     end
     @other_menus = @chef.menus.reject { |m| m.id == @selected_menu.id }
     @order = Order.new(chef:@chef, menu:@selected_menu)
-
   end
 
 
