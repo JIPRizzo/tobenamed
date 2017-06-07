@@ -23,7 +23,6 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
-    @order = Order.new
     # In the view — the menu that is selected
     if params[:food_choice] == "Meal Type" or params[:food_choice].nil?
       @selected_menu = @chef.menus.first
@@ -32,6 +31,8 @@ class ChefsController < ApplicationController
       @selected_menu = @chef.menus.select {|menu| menu.meal_type == params[:food_choice]}.first # dynamically change with params later!
     end
     @other_menus = @chef.menus.reject { |m| m.id == @selected_menu.id }
+    @order = Order.new(chef:@chef, menu:@selected_menu)
+
   end
 
 

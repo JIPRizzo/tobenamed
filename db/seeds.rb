@@ -39,7 +39,38 @@ chef = Chef.create!([
     name: "Mario Batali",
     description: "Being vegan is a lifestyle. Preparing vegan dishes requires a lot of passion and creativity from a person. I learned many fascinating things about plant-based cooking during my travel around Asia, where people in general eat more fruits and vegetables. I decided to introduce vegan cooking into my daily life. I have been cooking plant-based meals for over 7 years now. After trying my food some of my friends decided to go vegan as well. I love to emphasize the taste of the food without compromising on the quality of wht you eat. By trying my meals you will find out that being vegan is actually not as bad as it sounds.",
     avatar_url: "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/chef0815-francismallmann_0.jpg?itok=P6pXQUvY"
-  }
+  },
+
+  {
+    name: "Glenda Ramirez",
+    description: "My grandchildren inspired me to transform my traditional Latin-American recipies to suit vegan palletes - as if they hadn't given me enough! I enjoy sharing my love and the tastes of my homeland Colombia with my hosts. Always willing to share recipies!",
+    avatar_url: "http://www.myneworleans.com/BESTCHEF_Glenda_02.jpg"
+  },
+
+  {
+    name: "",
+    description: "",
+    avatar_url: ""
+  },
+
+  {
+    name: "",
+    description: "",
+    avatar_url: ""
+  },
+
+  {
+    name: "",
+    description: "",
+    avatar_url: ""
+  },
+
+  {
+    name: "",
+    description: "",
+    avatar_url: ""
+  },
+
   ])
 
 menus = Menu.create! ([
@@ -161,28 +192,28 @@ menus = Menu.create! ([
   },
 
   {
-    name: "American Classic",
-    description: "Appetizers: Rusty Kettle Yukon Gold Potatoes, All American Beetroot & Barley Burgers.  Burger Dessert: Carrot pudding with cardamom",
+    name: "Saturday in the Park",
+    description: "Appetizers: Chipotle, Quinoa & Coriander Mini-Burgers. Main: Baked Potatoe Surprise Dessert: Blueberry Nice Cream",
     chef: Chef.find_by_name("Mario Batali"),
     meal_type: "American",
     price_per_guest: 199,
      photo_urls: [
-    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17438567_1888774048070349_3351261710034927616_n.jpg",
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/15538843_1616708485297733_5083022987985158144_n.jpg",
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/15534836_222168461560396_2334209464317509632_n.jpg",
-    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17438567_1888774048070349_3351261710034927616_n.jpg"
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/18581400_149236242283737_4171002466684370944_n.jpg"
     ]
   },
 
   {
-    name: "",
-    description: "Appetizers: Main Dish: Dessert: ",
-    chef: Chef.find_by_name("Mario Batali"),
-    meal_type: "",
-    price_per_guest: ,
+    name: "Caribbean Delights",
+    description: "Appetizers: Mocajete Guacamole. Main Dish:Petacones, Arroz Verde & Frijoles. Dessert: Arroz sin Leche ",
+    chef: Chef.find_by_name("Glenda Ramirez"),
+    meal_type: "Latin-American",
+    price_per_guest: 220,
      photo_urls: [
-    "",
-    "",
-    ""
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/17817940_120899865121394_1614256431635103744_n.jpg",
+    "http://veganmiam.com/wp-content/uploads/2016/06/Vegan-Arroz-Verde-Patacones.jpg",
+    "https://static01.nyt.com/images/2016/11/11/dining/COOKING-ARROZ2/COOKING-MEXICAN2-articleLarge-v2.jpg",
     ]
   },
 
