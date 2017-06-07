@@ -6,7 +6,7 @@ class ChefsController < ApplicationController
     if params[:food_choice] == "Meal Type"
       @chefs = Chef.all
     else
-      @chefs = Chef.joins(:menus).where(menus: {meal_type: params[:food_choice]})
+      @chefs = Chef.joins(:menus).where(menus: {meal_type: params[:food_choice]}).distinct
     end
   end
 

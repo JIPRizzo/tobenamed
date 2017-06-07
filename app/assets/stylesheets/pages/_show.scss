@@ -84,12 +84,10 @@
   position: absolute;
   top: 50px;
   left: -40px;
-}
-
-.meal-type-category {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+  p {
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
 }
 
 .details-icon {
@@ -178,6 +176,7 @@
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   text-align: center;
+  margin-top: 8px;
 }
 .show-triangle-l {
   border-color: transparent #ED4A29 transparent transparent;
