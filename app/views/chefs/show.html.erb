@@ -1,34 +1,58 @@
 
 <!-- Selected Menu from Index Page | cards & carousel -->
 <div class="container-menu">
-
-  <%= render 'other_menus_card' %>
+  <div class="other-menus-card">
+    <div class="owl-carousel-wrapper">
+      <div class="owl-carousel">
+        <% @selected_menu.photos.each do |photo| %>
+        <div>
+          <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="menu-price">
+      <p><%= @selected_menu.price_per_guest %> DKK </p>
+    </div>
+    <div class="meal-type-blue-box text-center">
+     <p><%= @selected_menu.meal_type %></p>
+   </div>
+   <div class="meal-description-white-box">
+     <p><%= @selected_menu.description %></p>
+   </div>
+   <div class="other-menus-card-blue-box">
+     <div class="details-icon">
+       <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+       <p>Details</p>
+     </div>
+   </div>
+  </div>
 
 <!-- Booking Form | can only be viewed when logged in -->
  <div class="form_booking">
-  <% if current_user %>
-  <div class="form_new ">
-    <%= simple_form_for(@order) do |f| %>
-    <%= f.error_notification %>
-     <div class="form_new_design">
-      <div class="form-inputs">
-        <%= f.input :address, required:false %>
-        <%= f.input :guests, required:false%>
-        <%= f.input :date, required:false %>
-        <%= f.input :event_type, required:false %>
-        <%= f.hidden_field :chef_id %>
-        <%= f.hidden_field :menu_id %>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit %>
-      </div>
+    <% if current_user %>
+    <div class="form_new ">
+      <%= simple_form_for(@order) do |f| %>
+      <%= f.error_notification %>
+      <div class="form_new_design">
+        <div class="form-inputs">
+          <%= f.input :address, required:false, :input_html => { :class => 'field' }%>
+          <%= f.input :guests, required:false , :input_html => { :class => 'field' }%>
+          <%= f.input :date, required:false, :input_html => { :class => 'field' } %>
+          <%= f.input :event_type, required:false, :input_html => { :class => 'field' } %>
+          <%= f.hidden_field :chef_id %>
+          <%= f.hidden_field :menu_id %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
         <% end %>
         <% else %>
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <% end %>
-     </div>
+      </div>
+    </div>
   </div>
- </div>
 </div>
 
 <!-- Chef Picture & Description -->
@@ -50,21 +74,25 @@
     </div>
   </div>
 
-<!-- Other Potential Menus | cards & carousel -->
-  <div class="other-menucontainer">
-    <h3 class="text-center">Other Menus:</h3>
-    <% @other_menus.each do |menu| %>
+  <!-- Other Potential Menus | cards & carousel -->
+    <div class="other-menucontainer">
+      <h3 class="text-center">Other Menus:</h3>
+      <% @other_menus.each do |menu| %>
+      <%= link_to chef_path(@chef, menu_id: menu.id) do %>
       <div class="other-menus-card">
         <div class="owl-carousel-wrapper">
           <div class="owl-carousel">
             <% menu.photos.each do |photo| %>
-              <div>
-                <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
-              </div>
+            <div>
+              <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+            </div>
             <% end %>
           </div>
         </div>
-        <div class="meal-type-blue-box">
+        <div class="menu-price">
+          <p><%= menu.price_per_guest %> DKK </p>
+        </div>
+        <div class="meal-type-blue-box text-center">
           <p><%= menu.meal_type %></p>
         </div>
         <div class="meal-description-white-box">
@@ -74,12 +102,20 @@
          <div class="details-icon">
           <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
           <p>Details</p>
-         </div>
+          </div>
         </div>
-      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
 
 
 
