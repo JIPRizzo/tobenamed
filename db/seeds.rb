@@ -12,7 +12,7 @@ Chef.destroy_all
 
 chef = Chef.create!([
   {
-    name: "Ichiban Yashimoto",
+    name: "Ichiro Yashimoto",
     description: "I started cooking when I went vegan as a teenager. The first vegan cookbook I ever cooked from was the Tofu Cookery, by Louise Hagler. It was a really important cookbook for my family, because we never really cooked together before that. We’d make Barbeque Tofu, or Tofu Balls And Spaghetti, and it really brought us closer. My friends and I also formed a kitchen posse. We cooked for any old reason: birthdays, holidays, road trips, touring bands. We’d stay up all night making an elaborate seitan roast, wake up in the afternoon and make pancakes, go to an anti-fur demonstration then start all over again! People often ask if I’m self-taught, and I guess that, yes, technically I’m self-taught. But really I’ve picked things up from all of the awesome and skilled people I’ve worked alongside over the years. From the guy at Food Not Bombs who showed me how to slice 10 pounds of broccoli in under 10 minutes, to the prep cook at a Brooklyn restaurant where I was a waitress who taught me to slice onions – the world has been my cooking school",
     avatar_url: "http://www.cooksgazette.com/wp-content/uploads/2017/04/TenetsofJapaneseCooking-690x505.jpg?x31962"
   },
@@ -43,32 +43,32 @@ chef = Chef.create!([
 
   {
     name: "Glenda Ramirez",
-    description: "My grandchildren inspired me to transform my traditional Latin-American recipies to suit vegan palletes - as if they hadn't given me enough! I enjoy sharing my love and the tastes of my homeland Colombia with my hosts. Always willing to share recipies!",
+    description: "My grandchildren inspired me to transform my traditional Latin-American recipies to suit vegan palettes and get in touch with where my ingrediants come from - as if they hadn't given me enough! I enjoy sharing my love and the tastes of my homeland Colombia with my hosts. Always willing to share recipies!",
     avatar_url: "http://www.myneworleans.com/BESTCHEF_Glenda_02.jpg"
   },
 
   {
-    name: "",
-    description: "",
-    avatar_url: ""
+    name: "Giovani Rossi",
+    description: "Growing up in Italy...",
+    avatar_url: "http://www.secretitaly.it/wp-content/uploads/copertina2.jpg"
   },
 
   {
-    name: "",
-    description: "",
-    avatar_url: ""
+    name: "Rhonda Baker",
+    description: "...",
+    avatar_url: "https://static1.squarespace.com/static/55afcb75e4b09a51e1b870dc/t/57c4764be3df28ac02f206cd/1477933968897/"
   },
 
   {
-    name: "",
-    description: "",
-    avatar_url: ""
+    name: "Dominique Gupta",
+    description: "My love for French & Indian culture knows no bounds - my father was born in Calcutta and mother - mother simply livs for food and teaching others!",
+    avatar_url: "https://tomostyle.files.wordpress.com/2010/12/img_9293.jpg"
   },
 
   {
-    name: "",
-    description: "",
-    avatar_url: ""
+    name: "Heather Murray",
+    description: "I am New Yorker- born and bread! My mother however, was born in Brazil to Syrian immigrants who judiciously taught me about our heritage, particuarly our culinary preferences. I grew up trying all kinds of different flavors and types of cuisine - wasn't long before I realized that food and particularly hosting others is my passion in life! Today, after succesfully opening a Syrian restaurent in the Upper East Side I am the proud mother of 2 wonderful children!",
+    avatar_url: "https://myvegandirectory.com/wp-content/uploads/2016/07/DSC_8566.jpg"
   },
 
   ])
@@ -77,7 +77,7 @@ menus = Menu.create! ([
   {
     name: "Japo I",
     description: "Appetizer: Yamanashi Hoto Miso Soup. Main Dish: Avocado Cucumber Roll. Dessert: Creamy Vegan Chokore-to Custard Mousse",
-    chef: Chef.find_by_name("Ichiban Yashimoto"),
+    chef: Chef.find_by_name("Ichiro Yashimoto"),
     meal_type: "Japanese",
     price_per_guest: 220,
     photo_urls: [
@@ -90,7 +90,7 @@ menus = Menu.create! ([
   {
     name: "Indian Classics",
     description: "Appetizer: Vegetable Oven-Baked Samosas. Main Dish: Holy Lentil Dal. Dessert: Acai bowl.",
-    chef: Chef.find_by_name("Ichiban Yashimoto"),
+    chef: Chef.find_by_name("Ichiro Yashimoto"),
     meal_type: "Indian",
     price_per_guest: 160,
     photo_urls: [
@@ -122,7 +122,7 @@ menus = Menu.create! ([
     photo_urls: [
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/14730462_114694212378828_9139143841234812928_n.jpg",
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/16229359_1904652589767576_8715109257768337408_n.jpg",
-    # "DESERT"
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/18298581_1952441304990743_5143270869363064832_n.jpg"
      ]
   },
 
@@ -143,13 +143,12 @@ menus = Menu.create! ([
     name: "Feast from  Middle East",
     description: "Appetizer: Lebanese Tamiya Falafels. Main Dish: Multicolored Morrocan Tagine. Dessert: Baklava.",
     chef: Chef.find_by_name("Bobby Fley"),
-    meal_type: "Lebanese",
+    meal_type: "Arab",
     price_per_guest: 185,
     photo_urls: [
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17494317_1513790105306273_2286623580319907840_n.jpg",
     "https://foodtoglow.files.wordpress.com/2015/10/dsc_0273.jpg",
     "http://thegreekvegan.com/wp-content/uploads/2016/01/saragli-e1455036479693.png"
-
      ]
   },
 
@@ -218,55 +217,185 @@ menus = Menu.create! ([
   },
 
   {
-    name: "",
-    description: "Appetizers: Main Dish: Dessert: ",
-    chef: Chef.find_by_name("Mario Batali"),
-    meal_type: "",
-    price_per_guest: ,
+    name: "North Embraces South",
+    description: "Appetizers: Sun Dried Tomato Arancini. Main Dish: Bigoli in Gremolata Salsa. Dessert: Peanut Butter and Jelly Truffles. ",
+    chef: Chef.find_by_name("Giovani Rossi"),
+    meal_type: "Italian",
+    price_per_guest: 250,
      photo_urls: [
-    "",
-    "",
-    ""
+    "https://mbkr-minimalistbaker.netdna-ssl.com/wp-content/uploads/2015/09/AMAZING-10-INGREDIENT-Sun-dried-Tomato-Basil-Vegan-Arancini-Flavorful-simple-and-a-great-side-dish-for-Italian-night-vegan-italian-recipe-healthy.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/15048149_575088312692549_4262416799720538112_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/14676593_204673053300373_6396635776234291200_n.jpg"
     ]
   },
 
   {
-    name: "",
-    description: "Appetizers: Main Dish: Dessert: ",
-    chef: Chef.find_by_name("Mario Batali"),
-    meal_type: "",
-    price_per_guest: ,
+    name: "Pizza, Pizza, Pizza",
+    description: "Appetizers: Roasted Onion, Tomato & Sweet Potato Pizza. Main Dish: Vegan Cauliflower Pizza. Dessert: Apple-Cinnamon Pizza Pie. ",
+    chef: Chef.find_by_name("Rhonda Baker"),
+    meal_type: "Italian",
+    price_per_guest: 255,
      photo_urls: [
-    "",
-    "",
-    ""
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/14482061_663037263858919_5265801536084115456_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17663435_200450020448892_5926545438114054144_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/13534570_1040660432683660_1447070187_n.jpg"
     ]
   },
 
   {
-    name: "",
-    description: "Appetizers: Main Dish: Dessert: ",
-    chef: Chef.find_by_name("Mario Batali"),
-    meal_type: "",
-    price_per_guest: ,
+    name: "No Place Like Home",
+    description: "Appetizers: Mac No Cheese.  Main Dish: Mushroom-Quinoa Burger. Dessert: Rhonda's Peanut Butter Cups. ",
+    chef: Chef.find_by_name("Rhonda Baker"),
+    meal_type: "American",
+    price_per_guest: 219,
      photo_urls: [
-    "",
-    "",
-    ""
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/12965106_1726439434261007_1636314007_n.jpg",
+    "http://ghk.h-cdn.co/assets/16/43/480x720/gallery-1477592728-ghk060116ykmushroom-quinoa-burger.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/13150973_514585382065889_1136297037_n.jpg"
     ]
   },
 
   {
-    name: "",
-    description: "Appetizers: Main Dish: Dessert: ",
-    chef: Chef.find_by_name("Mario Batali"),
-    meal_type: "",
-    price_per_guest: ,
+    name: "Okonomiyaki - The way you like it!",
+    description: "Appetizers: Your Vegan Okonomiyaki. Main Dish: Japanese Miso Curry | Okra, Bok Choy, & Lotus Root. Dessert: Raw Lemon & Matcha Cheezecake. ",
+    chef: Chef.find_by_name("Ichiro Yashimoto"),
+    meal_type: "Japanese",
+    price_per_guest: 260,
      photo_urls: [
-    "",
-    "",
-    ""
+    "https://s-media-cache-ak0.pinimg.com/originals/0f/f2/45/0ff24524b3e0ac09fbe3eced338b7501.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/12930819_1556318721327478_1131714307_n.jpg",
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/16788595_1227301917365982_933386991460941824_n.jpg"
     ]
+  },
+
+  {
+    name: "Somewhat Tex - although More Mex",
+    description: "Appetizer: Main Dish: Dessert: ",
+    chef: Chef.find_by_name("Bobby Fley"),
+    meal_type: "Mexican",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://eluxemagazine.com/wp-content/uploads/2016/02/efhuf.png",
+    "http://abeautifulmess.typepad.com/.a/6a00d8358081ff69e2019affbdb695970d-800wi",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/18300166_787311914784056_934437364367884288_n.jpg"
+     ]
+  },
+
+  {
+    name: "La Belle Vie",
+    description: "Appetizer: Les Croquettes Coquettes. Main Dish: Not Ragu - Ratatouille. Dessert: Raspberry Mille-Feuille with Lemon Pastry Cream. ",
+    chef: Chef.find_by_name("Giovani Rossi"),
+    meal_type: "French",
+    price_per_guest: 250,
+    photo_urls: [
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17818440_1742706982685902_4543442634521182208_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/14279142_609797115847554_1686695722_n.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/12/vertical.jpg"
+     ]
+  },
+
+  {
+    name: "La Dolce Vita",
+    description: "Appetizer: La Piazzeta da Venezia. Main Dish: Mushroom Cashew Cream Risotto.  Dessert: Your Tiramisu ",
+    chef: Chef.find_by_name("Giovani Rossi"),
+    meal_type: "Italian",
+    price_per_guest: 230,
+    photo_urls: [
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/16465844_1835614740045359_6789119723217879040_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17076933_391403044557443_8209709224708538368_n.jpg",
+    "http://www.crazyvegankitchen.com/wp-content/uploads/2015/10/Vegan-Tiramisu-2.jpg"
+     ]
+  },
+
+  {
+    name: "Homage to Catalonia",
+    description: "Appetizer: Mediterranean peppers stuffed with chickpea tomato sauce, aragula, pine nuts & parsley. Main Dish: Valencian Paella with Vegan Chorizo. Dessert: Sant Joan Panellets. ",
+    chef: Chef.find_by_name("Mario Batali"),
+    meal_type: "Spanish",
+    price_per_guest: 250,
+    photo_urls: [
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/12328502_1290853670955102_255659960_n.jpg",
+    "http://danzadefogones.com/wp-content/uploads/2015/02/Arroz-con-chorizo-vegano-8.jpg",
+    "http://delantaldealces.com/wp-content/uploads/2016/10/coca-sant-joan-vegana-2.jpg"
+     ]
+  },
+
+  {
+    name: "From Calcutta to Paris",
+    description: "Appetizer: Daab Chingri but mind the prawns! Main Dish: Beetroot & ‘Paneer’ Curry. Dessert: Coconut Zest Madeleines. ",
+    chef: Chef.find_by_name("Dominique Gupta"),
+    meal_type: "Indian",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://eluxemagazine.com/wp-content/uploads/2016/03/20160211-App-Entrees-01181.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/03/491180-1-eng-GB_beetroot-and-paneer-470x540.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/12/23009552976_d3321d97d5_b.jpg"
+     ]
+  },
+
+  {
+    name: "Your New Favorites",
+    description: "Appetizer: Manakish Zaatar & Hummus. Main Dish: Mejadra with Batata Harra. Dessert: ",
+    chef: Chef.find_by_name("Heather Murray"),
+    meal_type: "Arab",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://eluxemagazine.com/wp-content/uploads/2016/11/Manakish_Zaatar.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/11/Middle-Eastern-Spicy-Potato-Salad-Recipe-9.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/11/Vegan-Basbousa-2.jpg"
+     ]
+  },
+
+  {
+    name: "Slow - FastFood",
+    description: "Appetizer: Main Dish: Dessert: ",
+    chef: Chef.find_by_name("Heather Murray"),
+    meal_type: "American",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://abeautifulmess.typepad.com/.a/6a00d8358081ff69e2019affbd19f8970c-800wi",
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/18251723_285671488553499_9198843062015492096_n.jpg",
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/14553101_227892420985331_6278520417497907200_n.jpg"
+     ]
+  },
+
+  {
+    name: "Too much Curry?",
+    description: "Appetizer: Nor Butter nor Chick'un Curry. Main Dish: Peanut Lentil Curry. Dessert: Cinnamon Turmeric Raspberry Lattes ",
+    chef: Chef.find_by_name("Ani Phyo"),
+    meal_type: "Indian",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://eluxemagazine.com/wp-content/uploads/2016/02/vegan-butter-chikun-RECIPE-on-hotforfoodblog.jpg",
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/15623792_642887262578100_7054808350063591424_n.jpg",
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/15056589_221706231600984_8157177668689723392_n.jpg"
+     ]
+  },
+
+  {
+    name: "Fais moi Rev",
+    description: "Appetizer: Mom's Vegan Croissants. Main Dish: Quinoa-Mushroom Balls in White Wine Soy Cream Sauce. Dessert: Aquafaba Macarons filled with Avocado ganache. ",
+    chef: Chef.find_by_name("Dominique Gupta"),
+    meal_type: "French",
+    price_per_guest: 250,
+    photo_urls: [
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/14566668_1573276846022552_6529143441530552320_n.jpg",
+    "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/14733230_313029252417656_243662956515033088_n.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/12/Thermapen-398.jpg"
+     ]
+  },
+
+  {
+    name: "My Take on Italian Classics",
+    description: "Appetizer: Unholy Vegetable Minestrone. Main Dish: Creamy Pumpkin Fettucini Alavocado. Dessert: Crema Bruciata. ",
+    chef: Chef.find_by_name("Antonio Luis"),
+    meal_type: "Italian",
+    price_per_guest: 250,
+    photo_urls: [
+    "http://cdn.veganricha.com/wp-content/uploads/2016/12/minestrone-veganricha-7881.jpg",
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/15253347_1853205031562244_5811746137727565824_n.jpg",
+    "http://eluxemagazine.com/wp-content/uploads/2016/12/main.jpg"
+     ]
   },
 
   ])
