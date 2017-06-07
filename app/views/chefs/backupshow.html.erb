@@ -1,0 +1,21 @@
+  <div class="other-menucontainer">
+  <h3 class="text-center">Other Menus:</h3>
+  <% @other_menus.each do |menu| %>
+    <div class="other-menus-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path menu.photos.second.path, height: 300, width: 400 , crop: :fill%>')">
+     <div class="meal-type-blue-box">
+      <p><%= menu.meal_type %></p>
+     </div>
+     <div class="meal-description-white-box">
+
+      <p><%= menu.description %></p>
+
+     </div>
+      <div class="other-menus-card-blue-box">
+
+       <div class="details-icon">
+      <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+      <p>Details</p>
+      </div>
+      </div>
+  <% end %>
+  </div>
