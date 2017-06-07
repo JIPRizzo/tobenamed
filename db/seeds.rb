@@ -10,6 +10,10 @@
 Menu.destroy_all
 Chef.destroy_all
 
+puts "Creating Chefs"
+puts "Creating Menus"
+puts "This will only take a few minutes"
+
 chef = Chef.create!([
   {
     name: "Ichiro Yashimoto",
