@@ -134,10 +134,14 @@
   position: relative;
 
 
+
 .name {
-position: absolute;
-left: 80px;
-bottom: 5px;
+  position: absolute;
+  left: 80px;
+  top: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #599C2E;
 }
 
 }
