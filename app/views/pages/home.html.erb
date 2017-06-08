@@ -11,12 +11,14 @@
 <!-- Call To Action | Select Date & Select Type of Cuisine -->
 
 <div class="home-search-wrapper">
-  <form action="/chefs" method="get" class="form-inline">
-    <%= select_tag 'food_choice', options_for_select(@meal_types.insert(0,"Meal Type")), {class: "form-control"}  %>
-    <input class="search datepicker form-control" type="text" placeholder="When?" id= "select_date" name="end_date">
-    <br>
-    <br>
-    <input type="submit" class="tbn-submit-btn btn btn-primary" value="GET Chef">
+  <form action="/chefs" method="get" class="form-inline home-form-box"">
+    <div class="home-form-inputs">
+        <%= select_tag 'food_choice', options_for_select(@meal_types.insert(0,"Meal Type")), {class: "form-control home-form-control"}  %>
+      <input class="search datepicker form-control home-form-control" type="text" placeholder="When?" id= "select_date" name="end_date">
+    </div>
+    <div class="home-form-button">
+      <input type="submit" class="tbn-submit-btn btn btn-primary" value="GET Chef">
+    </div>
   </form>
 </div>
 

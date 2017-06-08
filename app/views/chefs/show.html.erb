@@ -39,7 +39,7 @@
     <div class="form_new_design">
       <div class="form-inputs">
         <%= f.input :address, required:false, :input_html => { :class => 'field' }%>
-        <%= f.input :guests, required:false , :input_html => { :class => 'field' }%>
+        <%= f.input :guests, required:false , :input_html => { :class => 'field', min: 0 }%>
         <%= f.input :date, selected: @date, required:false, :input_html => { :class => 'field' } %>
         <%= f.input :event_type, required:false, :input_html => { :class => 'field' } %>
         <%= f.hidden_field :chef_id %>
