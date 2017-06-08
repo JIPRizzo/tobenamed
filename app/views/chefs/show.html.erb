@@ -29,6 +29,7 @@
    </div>
   </div>
 
+
 <!-- Booking Form | can only be viewed when logged in -->
  <div class="form_booking">
   <% if current_user %>
@@ -38,7 +39,7 @@
     <div class="form_new_design">
       <div class="form-inputs">
         <%= f.input :address, required:false, :input_html => { :class => 'field' }%>
-        <%= f.input :guests, required:false , :input_html => { :class => 'field' }%>
+        <%= f.input :guests, required:false , :input_html => { :class => 'field', min: 0 }%>
         <%= f.input :date, selected: @date, required:false, :input_html => { :class => 'field' } %>
         <%= f.input :event_type, required:false, :input_html => { :class => 'field' } %>
         <%= f.hidden_field :chef_id %>
@@ -103,6 +104,21 @@
          <div class="details-icon">
           <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
           <p>Details</p>
+
+         </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+    <%= link_to chef_path(@chef, menu_id: menu.id) do %>
+    <div class="other-menus-card">
+      <div class="owl-carousel-wrapper">
+        <div class="owl-carousel">
+          <% menu.photos.each do |photo| %>
+          <div>
+            <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
           </div>
         </div>
     </div>

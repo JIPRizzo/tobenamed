@@ -11,6 +11,10 @@ Order.destroy_all
 Menu.destroy_all
 Chef.destroy_all
 
+puts "Creating Chefs"
+puts "Creating Menus"
+puts "This will only take a few minutes :)"
+
 chef = Chef.create!([
   {
     name: "Ichiro Yashimoto",
@@ -71,6 +75,18 @@ chef = Chef.create!([
     description: "I am New Yorker- born and bread! My mother however, was born in Brazil to Syrian immigrants who judiciously taught me about our heritage, particuarly our culinary preferences. I grew up trying all kinds of different flavors and types of cuisine - wasn't long before I realized that food and particularly hosting others is my passion in life! Today, after succesfully opening a Syrian restaurent in the Upper East Side I am the proud mother of 2 wonderful children!",
     avatar_url: "https://myvegandirectory.com/wp-content/uploads/2016/07/DSC_8566.jpg"
   },
+
+  {
+    name: "Victoria Magnusson",
+    description: "Home is Barcelona, Spain but I was born to a Norway meets Denmark viking couple...",
+    avatar_url: "http://media.cntraveler.com/photos/569e9c9fc58591430b12cf8c/master/w_2880,c_limit/Victoria-Eliasdottirr-portrait-cr-courtesy.jpg"
+  },
+
+  {
+    name: "Rachel Sanchez",
+    description: "...",
+    avatar_url: "https://cdn-jpg2.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/2016/Rosio%20Sanchez_0.jpg?itok=JvTNT9T0&timestamp=1470854140"
+  }
 
   ])
 
@@ -398,6 +414,35 @@ menus = Menu.create! ([
     "http://eluxemagazine.com/wp-content/uploads/2016/12/main.jpg"
      ]
   },
+
+  # {
+  #   name: "",
+  #   description: "Appetizer: Main Dish: Dessert: ",
+  #   chef: Chef.find_by_name(""),
+  #   meal_type: "Italian",
+  #   price_per_guest: 250,
+  #   photo_urls: [
+  #   "",
+  #   "",
+  #   ""
+  #    ]
+  # },
+
+  # {
+  #   name: "",
+  #   description: "Appetizer: Main Dish: Dessert: ",
+  #   chef: Chef.find_by_name(""),
+  #   meal_type: "Italian",
+  #   price_per_guest: 250,
+  #   photo_urls: [
+  #   "",
+  #   "",
+  #   ""
+  #    ]
+  # },
+
+
+  puts "All done now - this computer willnot self destruct in 10 minutes ;)"
 
   ])
 
