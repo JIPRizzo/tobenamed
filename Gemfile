@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
+
+
 gem 'rails', '5.0.3'
 gem 'puma'
 gem 'pg'
@@ -13,6 +15,7 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 gem 'owlcarousel-rails'
+gem 'money-rails'
 
 
 

@@ -3,7 +3,7 @@
 <!-- Call To Action Instructions | Header -->
 
 <div class="home-container">
-  <h1> Stop wondering </h1>
+  <h1> St<%= cl_image_tag("radish", width: 65, height: 65) %>p w<%= cl_image_tag("avocado", width: 65, height: 65) %>ndering </h1>
   <h2> around for vegan food; </h2>
   <h3> find a chef in your area: </h3>
 </div>
@@ -11,16 +11,20 @@
 <!-- Call To Action | Select Date & Select Type of Cuisine -->
 
 <div class="home-search-wrapper">
-  <form action="/chefs" method="get" class="form-inline">
-    <%= select_tag 'food_choice', options_for_select(@meal_types.insert(0,"Meal Type")), {class: "form-control"}  %>
-    <input class="search datepicker form-control" type="text" placeholder="When?" id= "select_date" name="end_date">
-    <input type="submit" class="tbn-submit-btn btn btn-primary" value="GET Chef">
+  <form action="/chefs" method="get" class="form-inline home-form-box"">
+    <div class="home-form-inputs">
+        <%= select_tag 'food_choice', options_for_select(@meal_types.insert(0,"Meal Type")), {class: "form-control home-form-control"}  %>
+      <input class="search datepicker form-control home-form-control" type="text" placeholder="When?" id= "select_date" name="end_date">
+    </div>
+    <div class="home-form-button">
+      <input type="submit" class="tbn-submit-btn btn btn-primary" value="GET Chef">
+    </div>
   </form>
 </div>
 
 <!-- How it works Cards -->
 
-<h1 class="text-center">How it works </h1>
+<h1 class="hiw-font text-center">How it works </h1>
 
 <div class="container">
   <div class="row">

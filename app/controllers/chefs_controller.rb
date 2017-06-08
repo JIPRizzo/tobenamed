@@ -6,7 +6,7 @@
     if params[:food_choice] == "Meal Type"
       @chefs = Chef.all
     else
-      @chefs = Chef.joins(:menus).where(menus: {meal_type: params[:food_choice]})
+      @chefs = Chef.joins(:menus).where(menus: {meal_type: params[:food_choice]}).distinct
     end
   end
 
@@ -23,8 +23,15 @@
 
   def show
     @chef = Chef.find(params[:id])
+    if params[:date]
+      @date = Date.parse(params[:date].split("/").rotate(-1).join("/"))
+    else
+      @date = Date.today
+    end
     # In the view — the menu that is selected
-    if params[:food_choice] == "Meal Type" or params[:food_choice].nil?
+    if params[:menu_id]
+      @selected_menu = Menu.find(params[:menu_id])
+    elsif params[:food_choice] == "Meal Type" or params[:food_choice].nil?
       @selected_menu = @chef.menus.first
       # Iterate on those in the view to show other menus
     else
