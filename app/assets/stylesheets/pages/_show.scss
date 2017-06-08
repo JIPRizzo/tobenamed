@@ -182,15 +182,23 @@
 .container-size {
   padding-bottom: 50px;
 }
+
 .order-confirmation {
   padding-top: 40px;
 }
-
 
 .confirmation-details {
   padding-right: 50px;
   right: 30px;
   bottom: 100px;
+  text-align: center;
+}
+
+.confirmation-title {
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+
 }
 
 .border-confirmation {
@@ -206,6 +214,16 @@
   text-align: center;
   padding-left: 70px;
 }
+
+.menu-order-overview {
+  li {
+    width: 400px;
+  }
+}
+
+
+
+
 
 
 
