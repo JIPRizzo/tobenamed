@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Order.destroy_all
 Menu.destroy_all
 Chef.destroy_all
 

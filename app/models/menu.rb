@@ -4,6 +4,7 @@ class Menu < ApplicationRecord
   has_attachments :photos, maximum: 3
 
 
+
   after_validation :upcase_meal_type
 
   def upcase_meal_type
