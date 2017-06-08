@@ -19,8 +19,15 @@
   width: 200px !important;
 }
 
-.home-form-control:focus{
-  border-color: orange;
-  box-shadow: 0px 1px 3px orange inset, 0px 0px 8px orange;
+.home-form-control::placeholder {
+  color: black;
 }
 
+.home-form-control:focus{
+  border-color: orange;
+  box-shadow: 0px 1px 3px orange inset, 0px 0px 8px #FC8A15;
+}
+
+.black-box-text {
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
