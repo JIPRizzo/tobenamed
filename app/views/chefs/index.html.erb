@@ -13,7 +13,7 @@
             <% chef.menus.limit(2).each do |item| %>
             <div class="menu-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path item.photos.sample.path, height: 300, width: 400, crop: :fill%>')">
               <div> <%= item.name %></div>
-              <%= link_to "", chef_path(id: chef.id, food_choice: params[:food_choice]), class: "index-card-link" %>
+              <%= link_to "", chef_path(id: chef.id, food_choice: params[:food_choice], date: params[:end_date]), class: "index-card-link" %>
             </div>
             <% end %>
             <div class="bottom-section-back text-center">

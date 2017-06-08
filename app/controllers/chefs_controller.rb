@@ -23,6 +23,11 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
+    if params[:date]
+      @date = Date.parse(params[:date].split("/").rotate(-1).join("/"))
+    else
+      @date = Date.today
+    end
     # In the view — the menu that is selected
     if params[:menu_id]
       @selected_menu = Menu.find(params[:menu_id])
