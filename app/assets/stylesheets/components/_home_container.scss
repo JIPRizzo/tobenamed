@@ -7,8 +7,20 @@ div.home-container {
   font-family: $call-to-action-font;
   font-size: 80px;
   word-spacing: .4em;
-  h2, h3 {
-  font-family: $call-to-action-font;
-  font-size: 20px;
-  }
 }
+
+  h2 {
+    font-size: 50px;
+  }
+
+
+  h3 {
+  font-family: $call-to-action-font;
+  font-size: 30px;
+  }
+
+  .greenText {
+  color:#599C2E;
+  text-decoration: underline;
+  }
+

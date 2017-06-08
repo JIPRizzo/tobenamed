@@ -1,7 +1,6 @@
 
 <!-- Selected Menu from Index Page | cards & carousel -->
 <div class="container-menu">
-
    <h2 class="text-center">Book this menu:</h2>
   <div class="other-menus-card">
     <div class="owl-carousel-wrapper">
@@ -28,7 +27,6 @@
        <p>Details</p>
      </div>
    </div>
-
   </div>
 
 
@@ -49,14 +47,14 @@
       </div>
       <div class="form-actions">
         <%= f.button :submit %>
+        </div>
+        <% end %>
+        <% else %>
+        <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <% end %>
       </div>
-      <% end %>
-      <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <% end %>
     </div>
   </div>
-</div>
 </div>
 
 <!-- Chef Picture & Description -->
@@ -79,20 +77,24 @@
   </div>
 
   <!-- Other Potential Menus | cards & carousel -->
-  <div class="other-menucontainer">
-    <h3 class="text-center">Other Menus:</h3>
-    <% @other_menus.each do |menu| %>
+    <div class="other-menucontainer">
+      <h3 class="text-center">Other Menus:</h3>
+      <% @other_menus.each do |menu| %>
+      <%= link_to chef_path(@chef, menu_id: menu.id) do %>
       <div class="other-menus-card">
         <div class="owl-carousel-wrapper">
           <div class="owl-carousel">
             <% menu.photos.each do |photo| %>
-              <div>
-                <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
-              </div>
+            <div>
+              <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+            </div>
             <% end %>
           </div>
         </div>
-        <div class="meal-type-blue-box">
+        <div class="menu-price">
+          <p><%= menu.price_per_guest %> DKK </p>
+        </div>
+        <div class="meal-type-blue-box text-center">
           <p><%= menu.meal_type %></p>
         </div>
         <div class="meal-description-white-box">
@@ -102,6 +104,7 @@
          <div class="details-icon">
           <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
           <p>Details</p>
+
          </div>
         </div>
       </div>
@@ -117,41 +120,13 @@
           <div>
             <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
           </div>
-          <% end %>
         </div>
-      </div>
-      <div class="menu-price">
-        <p><%= menu.price_per_guest %> DKK </p>
-      </div>
-      <div class="meal-type-blue-box text-center">
-        <p><%= menu.meal_type %></p>
-      </div>
-      <div class="meal-description-white-box">
-
-        <p><%= menu.description %></p>
-
-      </div>
-      <div class="other-menus-card-blue-box">
-
-       <div class="details-icon">
-        <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
-        <p>Details</p>
-      </div>
     </div>
+    <% end %>
+    <% end %>
   </div>
-  <% end %>
-
-  <% end %>
 </div>
 
-
-</div> <!-- Closing menus container -->
-</div>
-
-
-
-</div>
-</div>
 
 
 
