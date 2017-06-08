@@ -108,31 +108,9 @@
          </div>
         </div>
       </div>
-    <% end %>
-  </div>
-</div>
-
-    <%= link_to chef_path(@chef, menu_id: menu.id) do %>
-    <div class="other-menus-card">
-      <div class="owl-carousel-wrapper">
-        <div class="owl-carousel">
-          <% menu.photos.each do |photo| %>
-          <div>
-            <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
-          </div>
-        </div>
+      <% end %>
+      <% end %>
     </div>
-    <% end %>
-    <% end %>
-  </div>
 </div>
-
-
-
-
-
-
-
-
 
 
