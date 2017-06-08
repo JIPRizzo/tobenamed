@@ -175,6 +175,10 @@
   text-decoration: underline;
 }
 
+
+
+// CSS related to confirmation page. show.html.erb - orders \\
+
 .container-size {
   padding-bottom: 50px;
 }
@@ -191,6 +195,7 @@
 
 .border-confirmation {
   border: 2px solid black;
+  text-align: center;
   vertical-align: middle;
   padding: 10px;
   margin: 10px;

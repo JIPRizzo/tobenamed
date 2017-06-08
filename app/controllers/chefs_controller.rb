@@ -1,4 +1,4 @@
-class ChefsController < ApplicationController
+  class ChefsController < ApplicationController
   skip_before_action :authenticate_user!
 
 

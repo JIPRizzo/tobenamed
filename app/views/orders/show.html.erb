@@ -1,7 +1,7 @@
 
 <div class="confirmation-title text-center">
-  <h2><%= cl_image_tag("Greenconfirmation.png", :width=>80, :height=>80, :crop=>"fill") %>Your booking is confirmed</h2>
-  <h4>Please view your booking details below</h4>
+    <h2><%= cl_image_tag("Greenconfirmation.png", :width=>80, :height=>80, :crop=>"fill") %>Your booking is confirmed</h2>
+    <h4>Please view your booking details below</h4>
 </div>
 
 
@@ -19,49 +19,48 @@
           <div class="show-triangle-l">
           </div>
         </div>
-
       </div>
 
-      <div class="col-xs-6">
+      <div class="col-xs-12">
         <div class="confirmation-details">
-          <h4 class="text-center">Details of your booking
-          </h4>
+          <h4 class="text-center">Details of your booking </h4>
           <ul>
-           <li class="border-confirmation text-center">
-            Number of guests:  <%= @order.guests %>
-          </li>
-          <li class="border-confirmation text-center">
-            Your address:  <%= @order.address %>
-          </li>
-          <li class="border-confirmation text-center">
-            Date for the event:  <%= @order.date %>
-          </li>
-          <li class="border-confirmation git text-center">
-            Type of event:  <%= @order.event_type %>
-          </li>
-          <li class="text-center" style="list-style-type: none">
-            <div class="container">
-             <div class="row">
-              <div class="col-xs-12 col-md-4">
-              <div class="chef-card center-card"><h4>Your selected menu</h4>
-                  <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @order.menu.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
-                    <div class="card-description">
-                      <h4><%= @order.menu.name %></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+             <li class="border-confirmation">
+              Number of guests:  <%= @order.guests %>
+            </li>
+            <li class="border-confirmation">
+              Your address:  <%= @order.address %>
+            </li>
+            <li class="border-confirmation">
+              Date for the event:  <%= @order.date %>
+            </li>
+            <li class="border-confirmation">
+              Type of event:  <%= @order.event_type %>
+            </li>
+            <li class="border-confirmation">
+              Dynamic Pricing Goes Here
+            </li>
+          </ul>
+       </div>
+     </div>
     </div>
   </div>
 </div>
-</div>
-</div>
 
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="chef-card center-card"><h4>Your selected menu</h4>
+        <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @order.menu.photos.sample.path, height: 300, width: 400, crop: :fill %>')">
+          <div class="card-description">
+            <h4><%= @order.menu.name %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div
+</div>
 
 
 
