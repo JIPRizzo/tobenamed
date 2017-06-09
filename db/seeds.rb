@@ -441,10 +441,11 @@ menus = Menu.create! ([
   #    ]
   # },
 
+])
 
-  puts "All done now - this computer willnot self destruct in 10 minutes ;)"
+puts "All done now - this computer willnot self destruct in 10 minutes ;)"
 
-  ])
+
 
 
 
