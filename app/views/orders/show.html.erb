@@ -60,11 +60,11 @@
       <div class="home-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url('<%= cl_image_path photo.path, height: 300, width: 400, crop: :fill %>')">
         <div class="confirmation-card-description">
           <% if index == 0 %>
-          <h4>Appetizer</h4>
+          <h4 class="menu-course">Appetizer</h4>
           <% elsif index == 1 %>
-          <h4>Main Dish</h4>
+          <h4 class="menu-course">Main Dish</h4>
           <% elsif index == 2 %>
-          <h4>Dessert</h4>
+          <h4 class="menu-course">Dessert</h4>
           <% end %>
         </div>
       </div>
