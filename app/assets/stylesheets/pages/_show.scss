@@ -1,3 +1,6 @@
+$card-height: 335px;
+$boxes-height: 135px;
+
 
 .other-menucontainer{
   margin-left: 70px;
@@ -7,7 +10,7 @@
 .other-menus-card {
   display: inline-block;
   margin-left: 100px;
-  height: 300px;
+  height: $card-height;
   width: 400px;
   background-color: #CECBCB;
   position: relative;
@@ -24,7 +27,7 @@
 
 
 .menu-card-background {
-  height: 300px;
+  height: $card-height;
   width: 400px;
 }
 
@@ -37,30 +40,33 @@
 }
 
 .other-menus-card-blue-box {
-  height: 100px;
+  height: $boxes-height;
   width: 100px;
   background-color: #5BC0EB;
   position: absolute;
   bottom: 0px;
   left: 0px;
   opacity: 0.9;
+  padding-top: 12px;
 }
 
 .meal-description-white-box {
-  height: 100px;
+  height: $boxes-height;
   width: 300px;
   background-color: white;
   position: absolute;
   bottom: 0px;
   left: 100px;
-}
-.meal-description-white-box {
   padding-top: 5px;
   font-size: 13px;
   line-height: 18px;
   padding-left: 5px;
   font-family: 'Crafty Girls', 'cursive';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+
 
 .menu-price {
   position: absolute;
@@ -93,9 +99,9 @@
 }
 
 .details-icon {
-  position: relative;
-  left: 25px;
-  top: 15px;
+  position: absolute;
+  left: 23px;
+  top: 36px;
   p {
     color: white;
   }
