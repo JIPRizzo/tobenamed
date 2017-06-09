@@ -23,10 +23,10 @@
 
   def show
     @chef = Chef.find(params[:id])
-    if params[:date]
-      @date = Date.parse(params[:date].split("/").rotate(-1).join("/"))
-    else
+    if params[:date].empty?
       @date = Date.today
+    else
+      @date = Date.parse(params[:date].split("/").rotate(-1).join("/"))
     end
     # In the view — the menu that is selected
     if params[:menu_id]
