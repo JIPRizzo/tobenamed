@@ -84,9 +84,15 @@ chef = Chef.create!([
 
   {
     name: "Rachel Sanchez",
-    description: "...",
+    description: "Growing up in Sicily, I spend a big part of my youth helping out my grand-parents at their farm on the outskirt of Catania. We did have meat on the table but it is there that my love for vegetables and their related seasons grew up to becoming a big cooking passion.",
     avatar_url: "https://cdn-jpg2.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/2016/Rosio%20Sanchez_0.jpg?itok=JvTNT9T0&timestamp=1470854140"
-  }
+  },
+
+   {
+    name: "Gianlucca Fabbio",
+    description: "Vegan has been a big part of my diet for just a few months but I have been a chef for many years. The shift happened after experiencing physical sickness due to an unhealthy lifestyle. Let's say that this came at a big hit behind the neck and forced me to change my habits. This event has influenced a lot my cooking and the way I share it with my guests. It is not just about eating but also to make your body feeling good.",
+    avatar_url: "http://media.saltscapes.com/images/articles/2465/main.jpg"
+},
 
   {
     name: "",
@@ -435,33 +441,37 @@ menus = Menu.create! ([
   },
 
   {
-    name: "",
-    description: "Appetizer: Main Dish: Dessert: ",
+
+    name: "Ride around Etna",
+    description: "Appetizer: Puttanesca Panzarottis Main Dish: Zucchini pasta with green pesto Dessert: Sicilian Cannoli ",
     chef: Chef.find_by_name("Rachel Sanchez"),
     meal_type: "Italian",
     price_per_guest: 250,
     photo_urls: [
-    "",
-    "",
-    ""
+    "http://www.onegreenplanet.org/wp-content/uploads/2010/10/2013/11/panzarotti-.jpg",
+    "http://www.onegreenplanet.org/wp-content/uploads/2010/10/2013/12/5-Minute-Basil-Pesto-Raw-Zucchini-Pasta.jpg",
+    "http://www.glutenfreepalate.com/wp-content/uploads/2017/03/Gluten-Free-Vegan-Cannoli5.2.jpg"
      ]
   },
 
+
   {
-    name: "",
-    description: "Appetizer: Main Dish: Dessert: ",
-    chef: Chef.find_by_name(""),
+    name: "Feeling of San Remo",
+    description: "Appetizer: Spicy Eggplant Caponata Main Dish:Oyster Mushroom Scallops With Pesto Pasta and Smoked Tofu Bacon Dessert: Tiramisu",
+    chef: Chef.find_by_name("Gianlucca Fabbio"),
     meal_type: "Italian",
     price_per_guest: 250,
     photo_urls: [
-    "",
-    "",
-    ""
+    "http://ogp-cdn.aws.onegreenplanet.org/wp-content/uploads/2010/10/2016/11/caponata.jpg",
+    "http://ogp-cdn.aws.onegreenplanet.org/wp-content/uploads/2010/10/2016/12/oyster-mushroom-scallops-with-pesto-pasta-and-smoked-tofu-bacon.jpg",
+    "https://3.bp.blogspot.com/-aP9CKiDox84/U_QrFoHXceI/AAAAAAAAHy4/KNEYPwUaJvI/s1600/glyka-se-potiri3.jpg"
      ]
   },
 
   ])
 
+
   puts "All done now - this computer willnot self destruct in 10 minutes ;)"
+
 
 
