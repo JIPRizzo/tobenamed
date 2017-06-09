@@ -415,31 +415,31 @@ menus = Menu.create! ([
      ]
   },
 
-  # {
-  #   name: "",
-  #   description: "Appetizer: Main Dish: Dessert: ",
-  #   chef: Chef.find_by_name(""),
-  #   meal_type: "Italian",
-  #   price_per_guest: 250,
-  #   photo_urls: [
-  #   "",
-  #   "",
-  #   ""
-  #    ]
-  # },
+  {
+    name: "My Heart Stayed in Florence",
+    description: "Appetizer: Main Dish: Dessert: ",
+    chef: Chef.find_by_name("Victoria Magnusson"),
+    meal_type: "Italian",
+    price_per_guest: 250,
+    photo_urls: [
+    "",
+    "",
+    ""
+     ]
+  },
 
-  # {
-  #   name: "",
-  #   description: "Appetizer: Main Dish: Dessert: ",
-  #   chef: Chef.find_by_name(""),
-  #   meal_type: "Italian",
-  #   price_per_guest: 250,
-  #   photo_urls: [
-  #   "",
-  #   "",
-  #   ""
-  #    ]
-  # },
+  {
+    name: "",
+    description: "Appetizer: Main Dish: Dessert: ",
+    chef: Chef.find_by_name("Rachel Sanchez"),
+    meal_type: "Italian",
+    price_per_guest: 250,
+    photo_urls: [
+    "",
+    "",
+    ""
+     ]
+  },
 
 
   puts "All done now - this computer willnot self destruct in 10 minutes ;)"
