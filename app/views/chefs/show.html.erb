@@ -7,7 +7,7 @@
       <div class="owl-carousel">
         <% @selected_menu.photos.each do |photo| %>
         <div>
-          <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag  photo.path, height: 325, width: 400, crop: :fill %>
         </div>
         <% end %>
       </div>
@@ -19,7 +19,9 @@
      <p><%= @selected_menu.meal_type %></p>
    </div>
    <div class="meal-description-white-box">
-     <p><%= @selected_menu.description %></p>
+     <p> <strong>Appetizer:</strong> <%= @selected_menu.appetizer %></p>
+     <p>Main Dish: <%= @selected_menu.main_dish %></p>
+     <p>Dessert: <%= @selected_menu.dessert %></p>
    </div>
    <div class="other-menus-card-blue-box">
      <div class="details-icon">
@@ -86,7 +88,7 @@
         <div class="owl-carousel">
           <% menu.photos.each do |photo| %>
           <div>
-            <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag  photo.path, height: 325, width: 400, crop: :fill %>
           </div>
           <% end %>
         </div>
@@ -99,7 +101,9 @@
       </div>
       <div class="meal-description-white-box">
 
-        <p><%= menu.description %></p>
+        <p>Appetizer: <%= menu.appetizer %></p>
+        <p>Main Dish: <%= menu.main_dish %></p>
+        <p>Dessert: <%= menu.dessert %></p>
 
       </div>
       <div class="other-menus-card-blue-box">
