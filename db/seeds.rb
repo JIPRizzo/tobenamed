@@ -84,13 +84,13 @@ chef = Chef.create!([
 
   {
     name: "Rachel Sanchez",
-    description: "...",
+    description: "Growing up in Sicily, I spend a big part of my youth helping out my grand-parents at their farm on the outskirt of Catania. We did have meat on the table but it is there that my love for vegetables and their related seasons grew up to becoming a big cooking passion.",
     avatar_url: "https://cdn-jpg2.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/2016/Rosio%20Sanchez_0.jpg?itok=JvTNT9T0&timestamp=1470854140"
   },
 
    {
     name: "Gianlucca Fabbio",
-    description: "...",
+    description: "Vegan has been a big part of my diet for just a few months but I have been a chef for many years. The shift happened after experiencing physical sickness due to an unhealthy lifestyle. Let's say that this came at a big hit behind the neck and forced me to change my habits. This event has influenced a lot my cooking and the way I share it with my guests. It is not just about eating but also to make your body feeling good.",
     avatar_url: "http://media.saltscapes.com/images/articles/2465/main.jpg"
 },
 
