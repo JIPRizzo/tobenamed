@@ -42,7 +42,7 @@ chef = Chef.create!([
 
   {
     name: "Mario Batali",
-    description: "Being vegan is a lifestyle. Preparing vegan dishes requires a lot of passion and creativity from a person. I learned many fascinating things about plant-based cooking during my travel around Asia, where people in general eat more fruits and vegetables. I decided to introduce vegan cooking into my daily life. I have been cooking plant-based meals for over 7 years now. After trying my food some of my friends decided to go vegan as well. I love to emphasize the taste of the food without compromising on the quality of wht you eat. By trying my meals you will find out that being vegan is actually not as bad as it sounds.",
+    description: "Being vegan is a lifestyle. Preparing vegan dishes demands passion, creativity and commitment from people. I learned many fascinating things about plant-based cooking during my travels around Asia, where diets consist of rich non-processed carbohydrates and copious fruits & vegetables. 7 years ago I switched to a whole-food plant based diet and although I occasionally miss some of my meat cooking rituals I have refined my cooking techniques and live a healthier life that is more in tune with my surroundings. ",
     avatar_url: "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/chef0815-francismallmann_0.jpg?itok=P6pXQUvY"
   },
 
@@ -54,25 +54,25 @@ chef = Chef.create!([
 
   {
     name: "Giovani Rossi",
-    description: "Growing up in Italy...",
+    description: "Growing up in Italy, raised by my Nona I was never far away from the kitchen and I can honestly count the times that eating wasn't a quasi ceremonious experience. I have been a vegan for about 2 years now and even though I have always been careful about where I sourced my ingredients,  after making the change I can confidently say that my creative process has been enriched and I have even started farming seasonal ingredients! Routine can smother passion, many who have tried to go on a diet start off loving saladas but by the end, can't stand them! This new chapter in my culinary career has forced me to be more createive. Luckily, I have a deep well of Italian traditional recipies that I attempt to convert into healthier interpretations to share with the world. Looking forward to cooking for you and your guests :)."
     avatar_url: "http://www.secretitaly.it/wp-content/uploads/copertina2.jpg"
   },
 
   {
     name: "Rhonda Baker",
-    description: "...",
+    description: "From early in life, food and specifically where our produce came from was always an integral part of my day to day routine. Growing up on a farm you usually either find a way to move to the city or get with the program- I chose the latter! Farm life is lovely, caring for animals, learning about the simple things in life and the beautiful almost miracolous harmony of nature is inspiring!",
     avatar_url: "https://static1.squarespace.com/static/55afcb75e4b09a51e1b870dc/t/57c4764be3df28ac02f206cd/1477933968897/"
   },
 
   {
     name: "Dominique Gupta",
-    description: "My love for French & Indian culture knows no bounds - my father was born in Calcutta and mother - mother simply livs for food and teaching others!",
+    description: "My love for French & Indian culture knows no bounds - my father was born in Calcutta and mother - mother simply loves cooking and hosting guests! After attending cooking school in France I worked for a few restaurents in my hometown but quickly lost my love for cooking. It was after my first trip to India that my love was reignited and I was introduced to real hearty vegan food!",
     avatar_url: "https://tomostyle.files.wordpress.com/2010/12/img_9293.jpg"
   },
 
   {
     name: "Heather Murray",
-    description: "I am New Yorker- born and bread! My mother however, was born in Brazil to Syrian immigrants who judiciously taught me about our heritage, particuarly our culinary preferences. I grew up trying all kinds of different flavors and types of cuisine - wasn't long before I realized that food and particularly hosting others is my passion in life! Today, after succesfully opening a Syrian restaurent in the Upper East Side I am the proud mother of 2 wonderful children!",
+    description: "I am New Yorker- born and bread! My mother however, was born in Brazil to Syrian immigrants who judiciously taught me about our heritage, particuarly our culinary preferences. I grew up trying all kinds of different flavors and types of cuisine - wasn't long before I realized that food and particularly hosting others is my passion in life! Today, after succesfully opening a Syrian restaurent in the Upper East Side and raising 2 wonderful children I am eager to share some of the recipes that have provided my with health and happiness!!",
     avatar_url: "https://myvegandirectory.com/wp-content/uploads/2016/07/DSC_8566.jpg"
   },
 
@@ -94,11 +94,17 @@ chef = Chef.create!([
     avatar_url: "http://media.saltscapes.com/images/articles/2465/main.jpg"
 },
 
+  {
+    name: "",
+    description: "...",
+    avatar_url: ""
+  }
+
   ])
 
 menus = Menu.create! ([
   {
-    name: "Japo I",
+    name: "Flavors from my hometown",
     description: "Appetizer: Yamanashi Hoto Miso Soup. Main Dish: Avocado Cucumber Roll. Dessert: Creamy Vegan Chokore-to Custard Mousse",
     chef: Chef.find_by_name("Ichiro Yashimoto"),
     meal_type: "Japanese",
@@ -137,8 +143,8 @@ menus = Menu.create! ([
   },
 
   {
-    name: "Ani Phyo I",
-    description: "Appetizer: Pan fried vegetable dumplings. Main Dish: Traditional Thai Vegeable Soup with Japanese Ramen Noodles. Dessert: Chocolate ginger lychees.",
+    name: "Try my Thai! ",
+    description: "Appetizer: Pan fried vegetable dumplings. Main Dish: Traditional Thai Vegetable Soup with Chinese Soy Noodles. Dessert: Chocolate ginger lychees.",
     chef: Chef.find_by_name("Ani Phyo"),
     meal_type: "Thai",
     price_per_guest: 210,
@@ -422,19 +428,20 @@ menus = Menu.create! ([
   },
 
   {
-    name: "My Heart Stayed in Florence",
-    description: "Appetizer: Main Dish: Dessert: ",
+    name: "Italian Spring Time",
+    description: "Appetizer: Roasted Fennel with Oranges and Greens. Main Dish: Zucchini Noodles with Vegan Lemon Cream Sauce. Dessert: Mini Profiterole.",
     chef: Chef.find_by_name("Victoria Magnusson"),
     meal_type: "Italian",
     price_per_guest: 250,
     photo_urls: [
-    "",
-    "",
-    ""
+    "http://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2014/10/24/0/CCSPL106_roasted-fennel-salad-recipe_s4x3.jpg.rend.hgtvcom.966.725.jpeg",
+    "https://scontent-fra3-1.cdninstagram.com/t51.2885-15/e35/15624234_621355384740917_6968549631345033216_n.jpg",
+    "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17268188_385004255217199_6358568068045602816_n.jpg"
      ]
   },
 
   {
+
     name: "Ride around Etna",
     description: "Appetizer: Puttanesca Panzarottis Main Dish: Zucchini pasta with green pesto Dessert: Sicilian Cannoli ",
     chef: Chef.find_by_name("Rachel Sanchez"),
@@ -447,7 +454,8 @@ menus = Menu.create! ([
      ]
   },
 
-   {
+
+  {
     name: "Feeling of San Remo",
     description: "Appetizer: Spicy Eggplant Caponata Main Dish:Oyster Mushroom Scallops With Pesto Pasta and Smoked Tofu Bacon Dessert: Tiramisu",
     chef: Chef.find_by_name("Gianlucca Fabbio"),
@@ -461,6 +469,7 @@ menus = Menu.create! ([
   },
 
   ])
+
 
   puts "All done now - this computer willnot self destruct in 10 minutes ;)"
 

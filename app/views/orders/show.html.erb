@@ -2,8 +2,8 @@
 
 <!-- Order Confirmation Header -->
 <div class="confirmation-title">
-  <h2><%= cl_image_tag("Greenconfirmation.png", :width=>80, :height=>80, :crop=>"fill") %>Your booking is confirmed</h2>
-  <h4>Please view your booking details below</h4>
+  <h2><%= cl_image_tag("Greenconfirmation.png", :width=>80, :height=>80, :crop=>"fill") %>Your booking is confirmed!</h2>
+  <h4> Below are your booking details </h4>
 </div>
 
 
@@ -33,7 +33,7 @@
             Number of guests:  <%= @order.guests %>
           </li>
           <li class="border-confirmation">
-            Your address:  <%= @order.address %>
+            Address:  <%= @order.address %>
           </li>
           <li class="border-confirmation">
             Date for the event:  <%= @order.date %>
