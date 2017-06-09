@@ -134,7 +134,7 @@ menus = Menu.create! ([
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/17126753_227493654384477_5492858375211319296_n.jpg",
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/16464790_969338483197266_6860611575573643264_n.jpg",
     "https://scontent-ams3-1.cdninstagram.com/t51.2885-15/e35/18809569_228469730980668_7605790042107150336_n.jpg"
-]
+     ]
   },
 
   {
@@ -461,7 +461,7 @@ menus = Menu.create! ([
     "http://ogp-cdn.aws.onegreenplanet.org/wp-content/uploads/2010/10/2016/12/oyster-mushroom-scallops-with-pesto-pasta-and-smoked-tofu-bacon.jpg",
     "https://3.bp.blogspot.com/-aP9CKiDox84/U_QrFoHXceI/AAAAAAAAHy4/KNEYPwUaJvI/s1600/glyka-se-potiri3.jpg"
      ]
-  },
+  }
 
   ])
 

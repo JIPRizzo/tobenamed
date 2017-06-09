@@ -23,7 +23,7 @@
 
   def show
     @chef = Chef.find(params[:id])
-    if params[:date].empty?
+    if params[:date].nil? || params[:date].empty?
       @date = Date.today
     else
       @date = Date.parse(params[:date].split("/").rotate(-1).join("/"))
