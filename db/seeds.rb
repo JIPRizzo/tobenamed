@@ -88,17 +88,12 @@ chef = Chef.create!([
     avatar_url: "https://cdn-jpg2.thedailymeal.com/sites/default/files/styles/hero_image_breakpoints_theme_tdmr_lg_1x/public/story/2016/Rosio%20Sanchez_0.jpg?itok=JvTNT9T0&timestamp=1470854140"
   },
 
-   {
+  {
     name: "Gianlucca Fabbio",
     description: "Vegan has been a big part of my diet for just a few months but I have been a chef for many years. The shift happened after experiencing physical sickness due to an unhealthy lifestyle. Let's say that this came at a big hit behind the neck and forced me to change my habits. This event has influenced a lot my cooking and the way I share it with my guests. It is not just about eating but also to make your body feeling good.",
     avatar_url: "http://media.saltscapes.com/images/articles/2465/main.jpg"
-},
+  },
 
-  {
-    name: "",
-    description: "...",
-    avatar_url: ""
-  }
 
   ])
 
@@ -443,7 +438,7 @@ menus = Menu.create! ([
   {
 
     name: "Ride around Etna",
-    description: "Appetizer: Puttanesca Panzarottis Main Dish: Zucchini pasta with green pesto Dessert: Sicilian Cannoli ",
+    description: "Appetizer: Puttanesca Panzarottis. Main Dish: Zucchini pasta with green pesto. Dessert: Sicilian Cannoli. ",
     chef: Chef.find_by_name("Rachel Sanchez"),
     meal_type: "Italian",
     price_per_guest: 250,
@@ -457,7 +452,7 @@ menus = Menu.create! ([
 
   {
     name: "Feeling of San Remo",
-    description: "Appetizer: Spicy Eggplant Caponata Main Dish:Oyster Mushroom Scallops With Pesto Pasta and Smoked Tofu Bacon Dessert: Tiramisu",
+    description: "Appetizer: Spicy Eggplant Caponata. Main Dish:Oyster Mushroom Scallops With Pesto Pasta and Smoked Tofu Bacon. Dessert: Tiramisu.",
     chef: Chef.find_by_name("Gianlucca Fabbio"),
     meal_type: "Italian",
     price_per_guest: 250,
@@ -471,7 +466,7 @@ menus = Menu.create! ([
   ])
 
 
-  puts "All done now - this computer willnot self destruct in 10 minutes ;)"
+  puts "All done now - this computer will not self destruct in 10 minutes ;)"
 
 
 
