@@ -7,7 +7,7 @@
       <div class="owl-carousel">
         <% @selected_menu.photos.each do |photo| %>
         <div>
-          <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag  photo.path, height: 325, width: 400, crop: :fill %>
         </div>
         <% end %>
       </div>
@@ -19,7 +19,9 @@
      <p><%= @selected_menu.meal_type %></p>
    </div>
    <div class="meal-description-white-box">
-     <p><%= @selected_menu.description %></p>
+     <p> <strong>Appetizer:</strong> <%= @selected_menu.appetizer %></p>
+     <p>Main Dish: <%= @selected_menu.main_dish %></p>
+     <p>Dessert: <%= @selected_menu.dessert %></p>
    </div>
    <div class="other-menus-card-blue-box">
      <div class="details-icon">
@@ -80,29 +82,33 @@
   </div>
 
   <!-- Other Potential Menus | cards & carousel -->
-    <div class="other-menucontainer">
-      <h3 class="text-center">Other Menus:</h3>
-      <% @other_menus.each do |menu| %>
-      <%= link_to chef_path(@chef, menu_id: menu.id) do %>
-      <div class="other-menus-card">
-        <div class="owl-carousel-wrapper">
-          <div class="owl-carousel">
-            <% menu.photos.each do |photo| %>
-            <div>
-              <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+  <div class="other-menucontainer">
+    <h3 class="text-center">Other Menus:</h3>
+    <% @other_menus.each do |menu| %>
+    <%= link_to chef_path(@chef, menu_id: menu.id) do %>
+    <div class="other-menus-card">
+      <div class="owl-carousel-wrapper">
+        <div class="owl-carousel">
+          <% menu.photos.each do |photo| %>
+          <div>
+            <%= cl_image_tag  photo.path, height: 325, width: 400, crop: :fill %>
             </div>
             <% end %>
           </div>
         </div>
-        <div class="menu-price">
-          <p><%= menu.price_per_guest %> DKK </p>
-        </div>
-        <div class="meal-type-blue-box text-center">
-          <p><%= menu.meal_type %></p>
-        </div>
-        <div class="meal-description-white-box">
-          <p><%= menu.description %></p>
-        </div>
+      </div>
+      <div class="menu-price">
+        <p><%= menu.price_per_guest %> DKK </p>
+      </div>
+      <div class="meal-type-blue-box text-center">
+        <p><%= menu.meal_type %></p>
+      </div>
+      <div class="meal-description-white-box">
+
+        <p>Appetizer: <%= menu.appetizer %></p>
+        <p>Main Dish: <%= menu.main_dish %></p>
+        <p>Dessert: <%= menu.dessert %></p>
+       </div>
         <div class="other-menus-card-blue-box">
          <div class="details-icon">
           <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
