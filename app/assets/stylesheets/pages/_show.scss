@@ -152,7 +152,6 @@ $boxes-height: 135px;
   display: flex;
   justify-content: space-between;
   width:  1000px;
-  margin-left: 80px;
 }
 
 
@@ -230,22 +229,35 @@ $boxes-height: 135px;
   text-decoration: underline;
 }
 
+
+
+// CSS related to confirmation page. show.html.erb - orders \\
+
 .container-size {
   padding-bottom: 50px;
 }
+
 .order-confirmation {
   padding-top: 40px;
 }
-
 
 .confirmation-details {
   padding-right: 50px;
   right: 30px;
   bottom: 100px;
+  text-align: center;
+}
+
+.confirmation-title {
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
+
 }
 
 .border-confirmation {
   border: 2px solid black;
+  text-align: center;
   vertical-align: middle;
   padding: 10px;
   margin: 10px;
@@ -256,6 +268,16 @@ $boxes-height: 135px;
   text-align: center;
   padding-left: 70px;
 }
+
+.menu-order-overview {
+  li {
+    width: 400px;
+  }
+}
+
+
+
+
 
 
 

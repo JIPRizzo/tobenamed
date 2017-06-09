@@ -1,0 +1,23 @@
+<div class="other-menus-card">
+  <div class="owl-carousel-wrapper">
+    <div class="owl-carousel">
+      <% @selected_menu.photos.each do |photo| %>
+      <div>
+        <%= cl_image_tag  photo.path, height: 300, width: 400, crop: :fill %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="meal-type-blue-box">
+   <p><%= @selected_menu.meal_type %></p>
+  </div>
+   <div class="meal-description-white-box">
+   <p><%= @selected_menu.description %></p>
+   </div>
+ <div class="other-menus-card-blue-box">
+   <div class="details-icon">
+     <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+     <p>Details</p>
+   </div>
+ </div>
+</div>

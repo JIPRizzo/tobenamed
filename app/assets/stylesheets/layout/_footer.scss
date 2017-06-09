@@ -23,6 +23,7 @@ a {
   margin-left: -5px;
   list-style: none;
   font-size: 30px;
+  line-height: 30px;
 
 }
 
@@ -62,3 +63,10 @@ i:hover {
   bottom: 10px;
 }
 
+.message {
+  padding-top:5px;
+  color:white;
+  line-height: 5px;
+  font-size: 15px;
+
+}

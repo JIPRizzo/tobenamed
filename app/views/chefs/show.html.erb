@@ -29,8 +29,8 @@
        <p>Details</p>
      </div>
    </div>
-
   </div>
+
 
 <!-- Booking Form | can only be viewed when logged in -->
  <div class="form_booking">
@@ -49,17 +49,20 @@
       </div>
       <div class="form-actions">
         <%= f.button :submit %>
+        </div>
+        <% end %>
+        <% else %>
+        <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <% end %>
       </div>
-      <% end %>
-      <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <% end %>
     </div>
   </div>
 </div>
-</div>
 
 <!-- Chef Picture & Description -->
+<div class="text-center">
+<div class="container">
+<div class="row">
 <div class="show-wrapper">
   <div id="box">
     <div class="show-bubble">
@@ -89,8 +92,9 @@
           <% menu.photos.each do |photo| %>
           <div>
             <%= cl_image_tag  photo.path, height: 325, width: 400, crop: :fill %>
+            </div>
+            <% end %>
           </div>
-          <% end %>
         </div>
       </div>
       <div class="menu-price">
@@ -104,35 +108,21 @@
         <p>Appetizer: <%= menu.appetizer %></p>
         <p>Main Dish: <%= menu.main_dish %></p>
         <p>Dessert: <%= menu.dessert %></p>
+       </div>
+        <div class="other-menus-card-blue-box">
+         <div class="details-icon">
+          <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
+          <p>Details</p>
 
+         </div>
+        </div>
       </div>
-      <div class="other-menus-card-blue-box">
-
-       <div class="details-icon">
-        <%= cl_image_tag("notebook_u0pfwb.png", :width=>50, :height=>50, :crop=>"fill") %>
-        <p>Details</p>
-      </div>
+      <% end %>
+      <% end %>
     </div>
-  </div>
-  <% end %>
-
-  <% end %>
-</div>
-
-
-</div> <!-- Closing menus container -->
-</div>
-
-
-
 </div>
 </div>
-
-
-
-
-
-
-
+</div>
+</div>
 
 
