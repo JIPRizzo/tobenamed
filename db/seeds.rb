@@ -461,9 +461,9 @@ menus = Menu.create! ([
     "http://ogp-cdn.aws.onegreenplanet.org/wp-content/uploads/2010/10/2016/12/oyster-mushroom-scallops-with-pesto-pasta-and-smoked-tofu-bacon.jpg",
     "https://3.bp.blogspot.com/-aP9CKiDox84/U_QrFoHXceI/AAAAAAAAHy4/KNEYPwUaJvI/s1600/glyka-se-potiri3.jpg"
      ]
-  },
+  }
 
-  )]
+  ])
 
 
   puts "All done now - this computer will not self destruct in 10 minutes ;)"

@@ -24,7 +24,7 @@ class Menu < ApplicationRecord
   end
 
   def regexer
-    self.description.match(/Appe[\w]+?: (.+)\..*Main.*: ([\w ]+).*Dessert: ([\w ]+)/)
+    self.description.match(/Appe[\w]+?: (.+)\.?.*Main.*: ?([\w ]+).*Dessert: ([\w ]+)/)
   end
 
 end
